@@ -1,0 +1,41 @@
+
+button{
+	background: rgb(28, 184, 65);
+	color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 110%;
+}
+.logo{
+    margin-top: 5%;
+}
+nav{
+    border-bottom-style: inset;
+}
+
+
+nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+nav li {
+  display: inline;
+}
+
+.operator{
+    background: grey;
+    width: 75%;
+    padding-bottom: 25%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.add {
+    font-size: 30px;
+    border-bottom-style: dotted;
+}
+
