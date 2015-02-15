@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+    </script>
+    <script src="jquery-2.1.1.min.js" type="text/javascript">
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+      var ran1, ran2, score=0, myTime;
+      
+      function begin(){
+		generateNums();
+          hideBegin();
+          setNum();
+          countdownTimer(30000);
+          myTime = setInterval(setBackgroundTimer, 550);
+          
+		}
+                          
+                          function setBackgroundTimer(){
+                            generateNums();
+                            randLeft();
+                            randRight();
+                          }
+                          
+                          
+                          function countdownTimer(number) {
+                            
+                            if (number == 0) {
+                              timerAlert();
+                              stopTimer();
+                            }
+                            else {
+                              $("#time").html("<h1> Timer: " + number / 1000 + "</h1>");
+                                              timer = setTimeout(function() {
+                                countdownTimer(number - 1000)
+                              }
+                              , 1000)
+                                
+                            }
+                          }
+                          
+                          function timerAlert() {
+                            
+                            alert("Time up!\n You got "+score);
+                            $('#currentScore').val("");
+                            score=0;
+                            hideSnap();
+                            showBegin();
+                            
+                            
+                          }
+                          
+                          function stopTimer() {
+                            clearTimeout(timer);
+                            clearInterval(myTime);
+                          }
+                          
+                          
+                          
+                          function setNum(){
+                            
+                            showSnap();
+                            hideBegin();
+                            randLeft();
+                            randRight();
+                            $('#currentScore').val(score);
+                            
+                          }
+                          
+                          function randLeft(){
+                            
+                            document.getElementById("leftBox").innerHTML = ran1;
+                          }
+                          
+                          function randRight(){
+                            
+                            document.getElementById("rightBox").innerHTML = ran2;
+                          }
+                          
+                          function hideBegin() {
+                            
+                            $("#begin").hide();
+                          }
+                          
+                          function hideSnap() {
+                            
+                            $("#snap").hide();
+                          }
+                          
+                          function showSnap() {
+                            
+                            $("#snap").show();
+                          }
+                          
+                          function showBegin() {
+                            
+                            $("#begin").show();
+                          }
+                          
+                          function checkNums(){
+                            
+                            if(ran1==ran2){
+                              
+                              score=score+10;
+                              
+                            }
+                            
+                            else{
+                              score=score-5;
+                            }
+                          }
+                          
+                          function snapFunction(){
+                            
+                            checkNums();
+                            generateNums();
+                            setNum();
+                            
+                          }
+                          
+                          function generateNums(){
+                            
+                            ran1 = parseInt(((Math.random() * 10) + 1));
+                            ran2 = parseInt(((Math.random() * 10) + 1));
+                          }
+                          
+                          
+      </script>
+      <title>
+        Snap 
+      </title>
+  </head>
+  <body onload="hideSnap()">
+    <h1 align="center">
+      Snap
+    </h1>
+    <div align="center">
+      <div id="leftBox">
+      </div>
+      <div id="rightBox">
+      </div>
+      <br>
+      <br>
+      <button id="begin" onclick="begin()">
+        Begin
+      </button>
+      <br>
+      <button id="snap" onclick="snapFunction()">
+        SNAP
+      </button>
+      <br>
+      <div id="time">
+      </div>
+      <br>
+      <div id="liveScoreUpdate">
+        <h2>
+          Current Score: 
+        </h2>
+        <input type="text" value="" size="3" id="currentScore">
+        <br>
+        <br>
+        <br>
+        <a href="index.html">
+          <img src="/images/HomeButton.jpg" alt="HIGHER OR LOWER" style="width:50px;height:50px;border:0">
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
