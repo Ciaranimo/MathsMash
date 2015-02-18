@@ -1,16 +1,14 @@
-
-button{
-	background: rgb(28, 184, 65);
-	color: white;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    font-size: 110%;
+body{
+    font-family: sans-serif;
+    color: #31288f;
 }
 .logo{
     margin-top: 5%;
+    width: 140px;
 }
 nav{
     border-bottom-style: inset;
+
 }
 
 
@@ -18,29 +16,106 @@ nav a {
   color: #5a5a5a;
   font-size: 11px;
   font-weight: bold;
-  padding: 14px 10px;
+  padding: 10px;
   text-transform: uppercase;
+
+
 }
 
 nav li {
-  display: inline;
+    display: inline;
+    float:right;
+
 }
 
 .operator{
-    background: grey;
     width: 75%;
     padding-bottom: 25%;
     margin: 0 auto;
-    position: relative;
+    background-color: grey;
 }
 
-.add {
-    font-size: 30px;
-    border-bottom-style: dotted;
+
+<!---Number Divs--->
+.num-display{
+    margin: 0 auto;
 }
-<!--Document get by id-->
+
 #firstnum{
-    width: 100px;
-    height: 50px;
-    background-color: yellow;
+    background-color: #31288f;
+    width:20%;
+    display:inline-block;
+    color: #ffffff;
+    padding: 2%;
+}
+
+.guess{
+    background-color: #c5c3de;
+    width:20%;
+    height: 30px;
+    display:inline-block;
+    border: solid;
+}
+#secondnum{
+    background-color: #31288f;
+    width:20%;
+    display:inline-block;
+    color: #ffffff;
+    padding: 2%;
+}
+
+#ans{
+    background-color: #31288f;
+    width:20%;
+    display:inline-block;
+    color: #ffffff;
+    padding: 2%;
+}
+
+<!--Buttons-->
+.buttons{
+    width: 75%;
+    margin: 0 auto;
+    
+}
+.btn-top{
+    
+    width: 250px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    
+}
+.btn-bottom{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.btn {
+    -webkit-border-radius: 18;
+    -moz-border-radius: 18;
+    border-radius: 18px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 40px;
+    background: #31288f;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    width: auto;
+    
+    
+}
+
+.btn:hover {
+  background: #716ab5;
+  text-decoration: none;
 }
