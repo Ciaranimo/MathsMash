@@ -1,0 +1,46 @@
+#page{
+    text-align: center;
+	color: purple;
+}
+
+h4{
+	font-family: 'fonty';
+
+}
+
+#remember{
+	font-family: 'fonty';
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+	max-height: 150px;
+	max-width: 200px;
+	width: 140px;
+	height: 140px;
+}
+
+#button{
+    background-color: #6B238E;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+	font-family: 'fonty';
+	font-size: 15px;
+}
+
+
+@font-face {
+    font-family: fonty;
+    src: url(Fonts/Quicksand-Light.otf);
+}
