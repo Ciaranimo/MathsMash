@@ -38,34 +38,7 @@ img{
 
 
 <!------CSS FOR Operators----------->
-body{
-    font-family: sans-serif;
-    color: #31288f;
-}
-.logo{
-    margin-top: 5%;
-    width: 140px;
-}
-nav{
-    border-bottom-style: inset;
 
-}
-
-
-nav a {
-  color: #5a5a5a;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 10px;
-  text-transform: uppercase;
-
-}
-
-nav li {
-    display: inline;
-    float:right;
-
-}
 
 .operator{
     width: 75%;
