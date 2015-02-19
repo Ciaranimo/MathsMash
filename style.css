@@ -1,4 +1,4 @@
-#page{
+.page{
     text-align: center;
 	color: purple;
 }
@@ -31,7 +31,6 @@ img{
     -webkit-border-radius: 5px;
     border-radius:6px;
     color: #fff;
-    font-size: 20px;
     text-decoration: none;
     cursor: pointer;
     border:none;

@@ -19,7 +19,7 @@
           timerAlert();
         }
         else {
-          $("#time").html("                          <h1> Timer: " + number / 1000 + "</h1>");
+          $("#time").html("<h1> Timer: " + number / 1000 + "</h1>");
                           timer = setTimeout(function() {
             countdownTimer(number - 1000)
           }
@@ -50,7 +50,7 @@
       function begin() {
         setNum();
         show();
-        countdownTimer(3000);
+        countdownTimer(30000);
         hideBegin();
       }
       
