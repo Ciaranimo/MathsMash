@@ -19,7 +19,6 @@ nav a {
   padding: 10px;
   text-transform: uppercase;
 
-
 }
 
 nav li {
@@ -76,28 +75,23 @@ nav li {
 .buttons{
     width: 75%;
     margin: 0 auto;
-    
+    display: inline-block;
 }
+
 .btn-top{
     
     width: 250px;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    
+  
     
 }
 .btn-bottom{
     width: 250px;
     margin-left: auto;
     margin-right: auto;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
+   
 }
 
 .btn {
@@ -111,6 +105,7 @@ nav li {
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     width: auto;
+    display: inline-block;
     
     
 }
