@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 
 	function countdownTimer(number) {
         
@@ -29,5 +29,38 @@
         
         
       }
-	       
-</script>
+	  
+	   
+      function stopTimer() {
+        clearTimeout(timer);
+		clearInterval(myTime);
+      }
+	  
+	  function hide(){
+	  
+		$("#but1").hide();
+        $("#but2").hide();
+		$("#but3").hide();
+        $("#but4").hide();
+		$("#snap").hide();
+	  }
+      
+      function show(){
+		
+		$("#but1").show();
+        $("#but2").show();
+		$("#but3").show();
+        $("#but4").show();
+		$("#snap").show();
+	  
+	  }
+      
+      function hideBegin() {
+        
+        $("#butBegin").hide();
+      }
+      
+      function showBegin() {
+        
+        $("#butBegin").show();
+      }
