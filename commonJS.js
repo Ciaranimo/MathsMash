@@ -15,5 +15,19 @@
         }
       }
 	  
+	  function timerAlert() {
+        
+        $('#firstnum').val("");
+        $('#secondnum').val("");
+        $('#currentScore').val("");
+        $('#totalPlays').val("");
+        alert("Time up!\n You got "+correct+" out of "+count);
+        correct=0;
+        count=0;
+        hide();
+        showBegin();
+        
+        
+      }
 	       
 </script>
