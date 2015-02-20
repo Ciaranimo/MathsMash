@@ -1,0 +1,137 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+
+
+body{
+    color: purple;
+    font-family: 'fonty';
+}
+
+.page{
+    text-align: center;
+	
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+	max-height: 150px;
+	max-width: 200px;
+	width: 140px;
+	height: 140px;
+}
+
+
+
+.button{
+    background-color: #6B238E;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+	font-family: 'fonty';
+	font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+@font-face {
+    font-family: fonty;
+    src: url(Fonts/Quicksand-Light.otf);
+}
+
+footer{
+    margin: 0 auto;
+   
+}
+<!------CSS FOR Operators----------->
+
+
+<!---Number Divs--->
+.opdisplay{
+    max-width: 600px;
+    margin-top: 100px;
+    
+    
+}
+
+
+
+#firstnum{
+    background-color: #31288f;
+    width:20%;
+    display:inline-block;
+    color: #ffffff;
+    padding: 2%;
+}
+
+.guess{
+    background-color: #c5c3de;
+    width:20%;
+    height: 30px;
+    display:inline-block;
+}
+#secondnum{
+    background-color: #31288f;
+    width:20%;
+    display:inline-block;
+    color: #ffffff;
+    padding: 2%;
+}
+
+#ans{
+    background-color: #31288f;
+    width:20%;
+    display:inline-block;
+    color: #ffffff;
+    padding: 2%;
+}
+
+<!--Buttons-->
+.op-buttons-top{
+    margin: 0 auto;
+    
+}
+
+.op-buttons-btm{
+    margin: 0 auto;
+    
+}
+
+.opbtn {
+    min-width: 60px;
+    background-color: #6B238E;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+	font-family: 'fonty';
+	font-size: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    
+}
+
+.opbtn:hover {
+  background: #716ab5;
+  text-decoration: none;
+}
+
+<!------------------------>
+
