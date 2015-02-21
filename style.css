@@ -16,6 +16,12 @@
     color: white;
 }
 
+#logoimg{
+	max-height: 150px;
+	max-width: 200px;
+	
+}
+
 .gameicons{
 	max-height: 150px;
 	max-width: 200px;
