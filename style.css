@@ -1,7 +1,7 @@
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-        box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .page{
@@ -16,13 +16,18 @@
     color: white;
 }
 
-img{
+.gameicons{
 	max-height: 150px;
 	max-width: 200px;
 	width: 140px;
 	height: 140px;
+	border: solid purple 1px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+	cursor: pointer;
+	margin: 10px 0 0 0;
 }
-
 
 
 .button{
