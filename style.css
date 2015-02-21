@@ -4,16 +4,10 @@
         box-sizing: border-box;
 }
 
-
-
-body{
-    color: purple;
-    font-family: 'fonty';
-}
-
 .page{
     text-align: center;
-	
+	color: purple;
+    font-family: 'fonty';
 }
 
 

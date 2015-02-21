@@ -18,48 +18,49 @@
 </head>
 
 <body onload="hide()">
+	<div class="page">
+		<h1 align="center">
+		  Higher or Lower
+		</h1>
+		<div id="1" align="center">
+			Is:
 
-    <h1 align="center">
-      Higher or Lower
-    </h1>
-    <div id="1" align="center">
-        Is:
+			<input type="text" value="" size="3" id="firstnum"> higher or lower than:
 
-        <input type="text" value="" size="3" id="firstnum"> higher or lower than:
+			<input type="text" value="" size="3" id="secondnum">
+			<br>
+			<br>
+			<button id="but1" onclick="higher()">
+				Higher
+			</button>
+			<button id="but2" onclick="lower()">
+				Lower
+			</button>
+			<br>
+			<br>
+			<div id="time">
+			</div>
+			<button id="butBegin" onclick="begin()">
+				Begin
+			</button>
+			<br>
+			<br>
+			<div id="liveScoreUpdate">
+				<h2>
+			  Current Score: 
+			</h2>
+				<input type="text" value="" size="3" id="currentScore"> out of
 
-        <input type="text" value="" size="3" id="secondnum">
-        <br>
-        <br>
-        <button id="but1" onclick="higher()">
-            Higher
-        </button>
-        <button id="but2" onclick="lower()">
-            Lower
-        </button>
-        <br>
-        <br>
-        <div id="time">
-        </div>
-        <button id="butBegin" onclick="begin()">
-            Begin
-        </button>
-        <br>
-        <br>
-        <div id="liveScoreUpdate">
-            <h2>
-          Current Score: 
-        </h2>
-            <input type="text" value="" size="3" id="currentScore"> out of
-
-            <input type="text" value="" size="3" id="totalPlays">
-            <br>
-            <br>
-            <br>
-            <a href="gamemenu.html">
-                <img src="images/HomeButton.jpg" alt="HIGHER OR LOWER" style="width:50px;height:50px;border:0">
-            </a>
-        </div>
-    </div>
+				<input type="text" value="" size="3" id="totalPlays">
+				<br>
+				<br>
+				<br>
+				<a href="gamemenu.html">
+					<img src="images/HomeButton.jpg" alt="HIGHER OR LOWER" style="width:50px;height:50px;border:0">
+				</a>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

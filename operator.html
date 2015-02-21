@@ -20,58 +20,60 @@
 </head>
 
 <body onload="hide()">
-    <header>
-        <h1 align="center">
-          Operators
-        </h1>
-    </header>
-    
-    <div class="page">
-       <div class="opdisplay">
-            <input type="text" value="" id="firstnum" /> 
-            <input type="text" value="" id="secondnum" /> =
-            <input type="text" value="" id="ans" />
-        </div>
-        <div class="op-buttons-top">
+	<div class="page">
+		<header>
+			<h1 align="center">
+			  Operators
+			</h1>
+		</header>
+		
+		
+		   <div class="opdisplay">
+				<input type="text" value="" id="firstnum" /> 
+				<input type="text" value="" id="secondnum" /> =
+				<input type="text" value="" id="ans" />
+			</div>
+			<div class="op-buttons-top">
 
-            <button class="opbtn" onclick="add()">
-                +
-            </button>
-            <button class="opbtn" onclick="sub()">
-                -
-            </button>
-            </div>
-        <div class="op-buttons-btm">
-            <button class="opbtn" onclick="mul()">
-                x
-            </button>
-            <button class="opbtn" onclick="div()">
-                ÷
-            </button>
-        </div>
-      
-        <div id="time"> 
-        </div>
-       
-            <button id="butBegin" onclick="begin()">
-                Begin
-            </button>
-        
-        <div id="liveScoreUpdate">
-            <h2>Current Score: </h2>
-            <input type="text" value="" size="3" id="currentScore"> out of
+				<button class="opbtn" onclick="add()">
+					+
+				</button>
+				<button class="opbtn" onclick="sub()">
+					-
+				</button>
+				</div>
+			<div class="op-buttons-btm">
+				<button class="opbtn" onclick="mul()">
+					x
+				</button>
+				<button class="opbtn" onclick="div()">
+					÷
+				</button>
+			</div>
+		  
+			<div id="time"> 
+			</div>
+		   
+				<button id="butBegin" onclick="begin()">
+					Begin
+				</button>
+			
+			<div id="liveScoreUpdate">
+				<h2>Current Score: </h2>
+				<input type="text" value="" size="3" id="currentScore"> out of
 
-            <input type="text" value="" size="3" id="totalPlays">
-           
-        </div>
-        
-    </div>
-    <footer>
-         <a href="gamemenu.html">
-                <img src="images/HomeButton.jpg" alt="Operator" style="width:50px;height:50px;border:0">
-             </a>
-    
-    </footer>
+				<input type="text" value="" size="3" id="totalPlays">
+			   
+			</div>
+			
+		</div>
+		<footer>
+			 <a href="gamemenu.html">
+					<img src="images/HomeButton.jpg" alt="Operator" style="width:50px;height:50px;border:0">
+				 </a>
+		
+		</footer>
+	</div>
 </body>
 
 </html>
