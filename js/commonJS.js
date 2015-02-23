@@ -22,6 +22,7 @@ function timerAlert() {
     count = 0;
     hide();
     showBegin();
+	stopTimer();
 
 
 }

@@ -1,11 +1,11 @@
-      var ran1, ran2, score = 0,
+      var ran1, ran2, count = 0, correct = 0,
           myTime, timer;
 
       function begin() {
           generateNums();
           hideBegin();
           setNum();
-          countdownTimer(30000);
+          countdownTimer(10000);
           myTime = setInterval(setBackgroundTimer, 550);
 
       }
@@ -25,7 +25,8 @@
           hideBegin();
           randLeft();
           randRight();
-          $('#currentScore').val(score);
+          $('#currentScore').val(correct);
+          $('#totalPlays').val(count);
 
       }
 
@@ -44,10 +45,11 @@
 
           if (ran1 == ran2) {
 
-              score = score + 10;
+              correct++;
+			  count++;
 
           } else {
-              score = score - 5;
+			  count++;
           }
       }
 
