@@ -1,6 +1,6 @@
 var randomNum, randomNum2, count = 0,
     correct = 0,
-    timer;
+    timer, totalUpdatedScore=0;
 
 function begin() {
     setNum();

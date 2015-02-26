@@ -18,6 +18,8 @@ function timerAlert() {
     $('#currentScore').val("");
     $('#totalPlays').val("");
     alert("Time up!\n You got " + correct + " out of " + count);
+	totalUpdatedScore = totalUpdatedScore + correct;
+	updatedTotalScore();
     correct = 0;
     count = 0;
     hide();
@@ -25,6 +27,11 @@ function timerAlert() {
 	stopTimer();
 
 
+}
+
+function updatedTotalScore(){
+	$('#finalScore').val(totalUpdatedScore);
+	
 }
 
 

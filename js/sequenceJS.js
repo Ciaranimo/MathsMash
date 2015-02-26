@@ -1,7 +1,7 @@
 var arr3;
 var ran1, ran2, addit, add2, subtr, sub2, multip, mul2, int2, int3, int4, ranAns1, ranAns2, ranAns3, correctAns, count = 0,
     correct = 0,
-    timer;
+     timer, totalUpdatedScore=0;
 
 
 function begin() {
