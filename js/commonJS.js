@@ -12,7 +12,7 @@ function countdownTimer(number) {
 }
 
 function timerAlert() {
-
+	
     $('#firstnum').val("");
     $('#secondnum').val("");
     $('#currentScore').val("");

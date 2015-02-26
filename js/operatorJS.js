@@ -1,7 +1,7 @@
       //numbers
       var num1, num2, ans, count = 0,
           correct = 0,
-           timer, totalUpdatedScore=0;
+           timer;
 
       function begin() {
           setNum();
