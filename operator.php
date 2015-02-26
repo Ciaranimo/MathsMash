@@ -4,16 +4,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
-    </script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
     </script>
     <script src="jquery-2.1.1.min.js" type="text/javascript">
     </script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="js/operatorJS.js"></script>
     <script type="text/javascript" src="js/commonJS.js"></script>
+	<script type="text/javascript">
+		var addRippleEffect = function (e) {
+		var target = e.target;
+		if (target.tagName.toLowerCase() !== 'button') return false;
+		var rect = target.getBoundingClientRect();
+		var ripple = target.querySelector('.ripple');
+		if (!ripple) {
+			ripple = document.createElement('span');
+			ripple.className = 'ripple';
+			ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px';
+			target.appendChild(ripple);
+		}
+		ripple.classList.remove('show');
+		var top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+		var left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+		ripple.style.top = top + 'px';
+		ripple.style.left = left + 'px';
+		ripple.classList.add('show');
+		return false;
+		}
+
+		document.addEventListener('click', addRippleEffect, false);
+	</script>
     <title>
         Operator
     </title>
@@ -41,7 +61,7 @@
 				<button class="opbtn" onclick="sub()">
 					-
 				</button>
-				</div>
+			</div>
 			<div class="op-buttons-btm">
 				<button class="opbtn" onclick="mul()">
 					x
@@ -73,7 +93,6 @@
 				<br>
 			   
 			</div>
-			
 
 		<footer>
 			 <a href="gamemenu.html">
