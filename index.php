@@ -18,7 +18,7 @@
             <input type="text" name="username">
             <h4>Password</h4>
             <input type="text" name="password">			
-			<p><a id="mash" href ="mainmenu.html"><button class="button" type="button">mash</button></a></p>
+			<p><a id="mash" href ="mainmenu.php"><button class="button" type="button">mash</button></a></p>
             <p id="remember"><input type="checkbox" name="remember" value="yes"  /> remember me?</p>
         </div>
 
