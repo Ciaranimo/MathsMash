@@ -1,3 +1,21 @@
+<?php 
+
+    // connect to DB
+    require("common.php"); 
+     
+    // Check whether user is logged in
+    if(empty($_SESSION['user'])) 
+    { 
+        // If they are not, redirect to the login page. 
+        header("Location: login.php"); 
+         
+        // this statement is needed 
+        die("Redirecting to login.php"); 
+    } 
+     
+?> 
+Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
+<a href="logout.php">Logout</a>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +38,7 @@
     </title>
 </head>
 
-<body onload="hide(); updatedTotalScore();">
+<body onload="hide()">
 	<div class="page">
 		<h1 align="center">
 		  Next In Sequence Game
@@ -67,14 +85,8 @@
 			<input type="text" value="" size="3" id="totalPlays">
 			<br>
 			<br>
-			<div>
-					Your total score: 
-					<input type="text" value="" size="3" id="finalScore">
-			</div>
-			<br>	
 			<br>
-			<br>
-			<a href="gamemenu.html">
+			<a href="gamemenu.php">
 				<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
 			</a>
 		</div>
