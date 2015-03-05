@@ -1,22 +1,4 @@
-<?php 
 
-    // connect to DB
-    require("common.php"); 
-     
-    // Check whether user is logged in
-    if(empty($_SESSION['user'])) 
-    { 
-        // If they are not, redirect to the login page. 
-        header("Location: login.php"); 
-         
-        // this statement is needed 
-        die("Redirecting to login.php"); 
-    } 
-     
-?> 
-Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
-<a href="logout.php">Logout</a> <br/>
-<a href="edit_account.php">Edit Account</a>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,6 +19,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 	
 		<div>
 			<a href="snap.php">
+				<img class="gameicons" src="images/Snap.png" alt="SNAP" >
 				<img class="gameicons" src="images/Snap.png" alt="SNAP" >
 			</a>
 		</div>

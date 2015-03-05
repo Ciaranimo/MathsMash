@@ -4,25 +4,28 @@
     box-sizing: border-box;
 }
 
+a{
+	text-decoration: none; /* removes underlining from all links */
+}
+
 .page{
     text-align: center;
-	color: purple;
-    font-family: 'fonty';
+	color: purple; /*sets default text color everywhere to purple */
+    font-family: 'fonty'; /* sets default font to our font*/
 }
 
 
 #mash{
-    text-decoration: none;
-    color: white;
+    color: white; /*sets title mash button to white colour*/
 }
 
-#logoimg{
+#logoimg{ /*sets login page logo to set size*/
 	max-height: 150px;
 	max-width: 200px;
 	
 }
 
-.gameicons{
+.gameicons{ /* sets size of images for game selection screen, possibly will be replaced with ripple links*/
 	max-height: 150px;
 	max-width: 200px;
 	width: 140px;
@@ -36,7 +39,7 @@
 }
 
 
-.button{
+.button{ /*sets background color of operator buttons, button spacing and the curved edges*/
     background-color: #6B238E;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -52,71 +55,92 @@
 }
 
 
-@font-face {
+@font-face { /*imports font*/
     font-family: fonty;
     src: url(Fonts/Quicksand-Light.otf);
 }
 
-footer{
+footer{ /*puts home button centre*/
     margin: 0 auto;
    
 }
-<!------CSS FOR Operators----------->
 
-
-<!---Number Divs--->
-.opdisplay{
-    max-width: 600px;
-    margin-top: 100px;
-    
-    
+.gameButton{
+	margin-left: auto;
+    margin-right: auto;
+	height: 100px;
+	border: solid black 1px;
+	width: 150px;	
 }
 
 
+<!------CSS for Operators----------->
 
-#firstnum{
-    background-color: #6B238E;
-    width:20%;
+
+.opdisplay{ /*does nothing*/
+
+}
+
+#firstnum{ /*first gotten number styling MUST BE 3 IDS FOR JS*/
+    width: 20%;
     display:inline-block;
-    color: #ffffff;
+    color: #6B238E;
     padding: 2%;
+	font-size: 15px;
+	font-weight: bold;
 }
 
-.guess{
-    background-color: #c5c3de;
+#secondnum{ /*second gotten number styling MUST BE 3 IDS FOR JS*/
     width:20%;
-    height: 30px;
-    display:inline-block;
-}
-#secondnum{
-    background-color: #6B238E;
-    width:20%;
-    display:inline-block;
-    color: #ffffff;
+    display: inline-block;
+    color: #6B238E;
     padding: 2%;
+	font-size: 15px;
+	font-weight: bold;
 }
 
-#ans{
-    background-color: #6B238E;
+#ans{ /*answer number styling MUST BE 3 IDS FOR JS*/
     width:20%;
     display:inline-block;
-    color: #ffffff;
+    color: #6B238E;
     padding: 2%;
+	font-family: 'fonty';
+	border: none;
+	font-size: 15px;
+	font-weight: bold;
 }
+
+.guess{ /*box to represent user guess*/
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: solid #6B238E 1px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+	
+}
+#equalsOP{ /*just for the equals sign*/
+	display: inline;
+	color: #6B238E;
+	font-weight: bold;
+}
+
+
 
 <!--Buttons-->
-.op-buttons-top{
+.op-buttons-top{ /*centres the top 2 buttons*/
     margin: 0 auto;
-    
 }
 
-.op-buttons-btm{
+.op-buttons-btm{ /*centres the top 2 buttons*/
     margin: 0 auto;
-    
 }
 
-.opbtn {
-    min-width: 60px;
+.opbtn { /*for each operator button styling*/
+	width: 90px;	
+	height: 90px;
+	font-size: 50px;
     background-color: #6B238E;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -124,41 +148,26 @@ footer{
     color: #fff;
     text-decoration: none;
     cursor: pointer;
-    border:none;
+    border: none;
 	font-family: 'fonty';
-	font-size: 60px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    
-    
-}
-
-.opbtn:hover {
-  background: #716ab5;
-  text-decoration: none;
+    margin-bottom: 10px;       
 }
 
 
-button {
+button { /*applies ripple on every button*/
   position: relative;
-  display: block;
-  width: 13em;
-  height: 3em;
-  margin: 2em;
   border: none;
   outline: none;
   letter-spacing: .2em;
   font-weight: bold;
-  background: yellow;
   cursor: pointer;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 2px;
-  font-family: Georgia;
 }
+
 
 .ripple {
   position: absolute;

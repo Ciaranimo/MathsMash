@@ -1,22 +1,5 @@
-<?php 
-
-    // connect to DB
-    require("common.php"); 
-     
-    // Check whether user is logged in
-    if(empty($_SESSION['user'])) 
-    { 
-        // If they are not, redirect to the login page. 
-        header("Location: login.php"); 
-         
-        // this statement is needed 
-        die("Redirecting to login.php"); 
-    } 
-     
-?> 
-Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
-<a href="logout.php">Logout</a>
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -65,12 +48,17 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 			</h1>
 		</header>
 		
+		<div class="content">
 		
-		   <div class="opdisplay">
-				<input type="text" value="" id="firstnum" /> 
-				<input type="text" value="" id="secondnum" /> =
+		    <div class="opdisplay">
+				<div id="firstnum"> </div>
+				<div class="guess">?</div> <!-- guess box-->
+				<div id="secondnum"> </div> 
+				<div id="equalsOP">=</div>
 				<input type="text" value="" id="ans" />
 			</div>
+			<br>
+			
 			<div class="op-buttons-top">
 
 				<button class="opbtn" onclick="add()">
@@ -80,6 +68,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 					-
 				</button>
 			</div>
+			
 			<div class="op-buttons-btm">
 				<button class="opbtn" onclick="mul()">
 					x
@@ -111,6 +100,8 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 				<br>
 			   
 			</div>
+		</div>	
+		
 
 		<footer>
 			 <a href="gamemenu.php">
