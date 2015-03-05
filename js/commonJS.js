@@ -20,6 +20,7 @@ function timerAlert() {
     alert("Time up!\n You got " + correct + " out of " + count);
 	totalUpdatedScore = totalUpdatedScore + correct;
 	updatedTotalScore();
+	ajaxSubmit();
     correct = 0;
     count = 0;
     hide();
@@ -28,6 +29,27 @@ function timerAlert() {
 
 
 }
+
+function ajaxSubmit() {
+	// Store data to be submitted into variables
+	var score = totalUpdatedScore;
+	var userID = "mrprunty";
+	// Fetch data to be posted
+	allData = "playerName="+userID+"&score="+score;
+	
+	// Setup the ajax request
+	$.ajax({
+		type: "POST",
+		url: "./savescore.php",
+		data: allData,
+		fail: function() {
+			alert( "error" );
+		}
+	});
+	
+	// return false so the page does not actually change
+	return false;		
+};
 
 function updatedTotalScore(){
 	$('#finalScore').val(totalUpdatedScore);
