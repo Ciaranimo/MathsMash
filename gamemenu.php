@@ -20,7 +20,6 @@
 		<div>
 			<a href="snap.php">
 				<img class="gameicons" src="images/Snap.png" alt="SNAP" >
-				<img class="gameicons" src="images/Snap.png" alt="SNAP" >
 			</a>
 		</div>
 		
