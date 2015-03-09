@@ -1,4 +1,4 @@
-        <?php 
+<?php 
 
     // get connection to DB
     require("common.php"); 

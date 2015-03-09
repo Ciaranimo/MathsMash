@@ -33,14 +33,15 @@ function timerAlert() {
 function ajaxSubmit() {
 	// Store data to be submitted into variables
 	var score = totalUpdatedScore;
-	var userID = "mrprunty";
+	//var user = "<?php echo $_SESSION['user']; ?>";
+	var userID = actualUser;
 	// Fetch data to be posted
 	allData = "playerName="+userID+"&score="+score;
 	
 	// Setup the ajax request
 	$.ajax({
 		type: "POST",
-		url: "./savescore.php",
+		url: "./saveScore.php",
 		data: allData,
 		fail: function() {
 			alert( "error" );

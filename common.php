@@ -1,10 +1,14 @@
 <?php
 //common.php accesses the mySQL database
 //variables
+//$username = "1819848_ms";
+//$password = "mathsmash1";
 $username = "root";
 $password = "root";
 $host = "localhost";
 $dbname = "MathsServer";
+//$host = "fdb13.biz.nf";
+//$dbname = "1819848_ms";
 
 try{
     $db = new PDO("mysql:host={$host}; dbname={$dbname};charset=UTF8", $username, $password, $options);
