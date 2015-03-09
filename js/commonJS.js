@@ -18,7 +18,7 @@ function timerAlert() {
     $('#currentScore').val("");
     $('#totalPlays').val("");
     alert("Time up!\n You got " + correct + " out of " + count);
-	totalUpdatedScore = totalUpdatedScore + correct;
+	totalUpdatedScore = correct;
 	updatedTotalScore();
 	ajaxSubmit();
     correct = 0;

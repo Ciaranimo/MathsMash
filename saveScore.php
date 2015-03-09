@@ -16,7 +16,7 @@
 	$score	 				= $_POST["score"];
 
 	// Save data to database
-	$query = " UPDATE users SET score = '$score' WHERE username = '$playerName' ";
+	$query = " UPDATE users SET score = score + '$score' WHERE username = '$playerName' ";
 	$saveData = mysqli_query($conx, $query);
 
 	if($saveData){
