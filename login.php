@@ -1,19 +1,15 @@
 <?php 
 
-    // First we execute our common code to connection to the database and start the session 
+    // Get DB link
     require("common.php"); 
      
-    // This variable will be used to re-display the user's username to them in the 
-    // login form if they fail to enter the correct password.  It is initialized here 
-    // to an empty value, which will be shown if the user has not submitted the form. 
+    // this variable will be used to re-display the username if incorrect password entered 
     $submitted_username = ''; 
      
-    // This if statement checks to determine whether the login form has been submitted 
-    // If it has, then the login code is run, otherwise the form is displayed 
+    // check if login submitted
     if(!empty($_POST)) 
     { 
-        // This query retreives the user's information from the database using 
-        // their username. 
+        // retrieve user info query
         $query = " 
             SELECT 
                 id, 
@@ -26,21 +22,20 @@
                 username = :username 
         "; 
          
-        // The parameter values 
+        // parameter
         $query_params = array( 
             ':username' => $_POST['username'] 
         ); 
          
         try 
         { 
-            // Execute the query against the database 
+            // run query
             $stmt = $db->prepare($query); 
             $result = $stmt->execute($query_params); 
         } 
         catch(PDOException $ex) 
         { 
-            // Note: On a production website, you should not output $ex->getMessage(). 
-            // It may provide an attacker with helpful information about your code. 
+             
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
@@ -69,9 +64,7 @@
                 $login_ok = true; 
             } 
         } 
-         
-        // If the user logged in successfully, then we send them to the private members-only page 
-        // Otherwise, we display a login failed message and show the login form again 
+        
         if($login_ok) 
         { 
             // Here I am preparing to store the $row array into the $_SESSION by 
@@ -83,25 +76,18 @@
             unset($row['password']); 
              
             // This stores the user's data into the session at the index 'user'. 
-            // We will check this index on the private members-only page to determine whether 
-            // or not the user is logged in.  We can also use it to retrieve 
-            // the user's details. 
             $_SESSION['user'] = $row; 
              
-            // Redirect the user to the private members-only page. 
+            // Rediret to main menu
             header("Location: mainmenu.php"); 
             die("Redirecting to: mainmenu.php"); 
         } 
         else 
         { 
-            // Tell the user they failed 
+            
             print("Login Failed."); 
              
-            // Show them their username again so all they have to do is enter a new 
-            // password.  The use of htmlentities prevents XSS attacks.  You should 
-            // always use htmlentities on user submitted values before displaying them 
-            // to any users (including the user that submitted them).  For more information: 
-            // http://en.wikipedia.org/wiki/XSS_attack 
+            // Show user their password again. The use of htmlentities prevents XSS attacks. 
             $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8'); 
         } 
     } 
