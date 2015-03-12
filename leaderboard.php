@@ -12,6 +12,17 @@
         // this statement is needed 
         die("Redirecting to login.php"); 
     } 
+	
+		 $db = mysql_connect("localhost","root","root"); 
+				 if (!$db) {
+				 die("Database connection failed miserably: " . mysql_error());
+				 }
+				 $db_select = mysql_select_db("MathsServer",$db);
+					 if (!$db_select) {
+					 die("Database selection also failed miserably: " . mysql_error());
+					 }
+					 
+	
 
 ?> 
 
@@ -42,36 +53,25 @@
 		</style>
     </head>
     <body>
-			<?php
-				$hostdb = 'localhost';
-				$namedb = 'root';
-				$userdb = 'root';
-				$passdb = 'MathsServer';
-
-				try {
-				  $conn = new PDO("mysql:host=$hostdb; dbname=$namedb", $userdb, $passdb);
-				  $conn->exec("SET CHARACTER SET utf8");   
-
-				  $sql = "SELECT 'username', 'score' FROM 'MathsServer' ";
-				  $result = $conn->query($sql);
-
-				  if($result !== false) {
-					$html_table = '<table border="1" cellspacing="0" cellpadding="2"><tr><th>Username</th><th>Score</th></tr>';
-
-					foreach($result as $row) {
-					  $html_table .= '<tr><td>' .$row['username']. '</td><td>' .$row['score']. '</td></tr>';
-					}
-				  }
-
-				  $conn = null;   
-
-				  $html_table .= '</table>'; 
-
-				  echo $html_table;  
-				}
-				catch(PDOException $e) {
-				  echo $e->getMessage();
-				}
-			?>  
+			<div id="ldrbrd">
+				 <?php
+					$result = mysql_query("SELECT * FROM MathsServer", $db);
+					 if (!$result) {
+					 die("Database query failed: " . mysql_error());
+					 }
+					 while ($row = mysql_fetch_array($result)) {
+					 echo "<h2>";
+					 echo $row[1]."";
+					 echo "</h2>";
+					 echo "<p>";
+					 echo $row[2]."";
+					 echo "</p>";
+					 }
+					?>
+				</div>
     </body>
 </html>
+
+<?php
+ mysql_close($db);
+?>
