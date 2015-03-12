@@ -1,35 +1,31 @@
 <?php 
 
-    // First we execute our common code to connection to the database and start the session 
+    // Get common DB connection
     require("common.php"); 
      
-    // At the top of the page we check to see whether the user is logged in or not 
+    // check if user logged in
     if(empty($_SESSION['user'])) 
     { 
-        // If they are not, we redirect them to the login page. 
+        // if not go to login
         header("Location: login.php"); 
          
-        // Remember that this die statement is absolutely critical.  Without it, 
-        // people can view your members-only content without logging in. 
+        // needed statement
         die("Redirecting to login.php"); 
     } 
      
-    // This if statement checks to determine whether the edit form has been submitted 
-    // If it has, then the account updating code is run, otherwise the form is displayed 
+    // check if edit form submitted
     if(!empty($_POST)) 
     { 
-        // Make sure the user entered a valid E-Mail address 
+        // ensure valid email address 
         if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
         { 
             die("Invalid E-Mail Address"); 
         } 
          
-        // If the user is changing their E-Mail address, we need to make sure that 
-        // the new value does not conflict with a value that is already in the system. 
-        // If the user is not changing their E-Mail address this check is not needed. 
+        // check if email entered is not already in DB
         if($_POST['email'] != $_SESSION['user']['email']) 
         { 
-            // Define our SQL query 
+            // Define SQL query 
             $query = " 
                 SELECT 
                     1 
@@ -45,18 +41,17 @@
              
             try 
             { 
-                // Execute the query 
+                // run query
                 $stmt = $db->prepare($query); 
                 $result = $stmt->execute($query_params); 
             } 
             catch(PDOException $ex) 
             { 
-                // Note: On a production website, you should not output $ex->getMessage(). 
-                // It may provide an attacker with helpful information about your code.  
+                  
                 die("Failed to run query: " . $ex->getMessage()); 
             } 
              
-            // Retrieve results (if any) 
+            // Retrieve results
             $row = $stmt->fetch(); 
             if($row) 
             { 
@@ -65,7 +60,6 @@
         } 
          
         // If the user entered a new password, we need to hash it and generate a fresh salt 
-        // for good measure. 
         if(!empty($_POST['password'])) 
         { 
             $salt = dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647));
@@ -96,17 +90,14 @@
             $query_params[':salt'] = $salt; 
         } 
          
-        // Note how this is only first half of the necessary update query.  We will dynamically 
-        // construct the rest of it depending on whether or not the user is changing
-        // their password. 
+        // first half of query
         $query = " 
             UPDATE users 
             SET 
                 email = :email 
         "; 
          
-        // If the user is changing their password, then we extend the SQL query 
-        // to include the password and salt columns and parameter tokens too. 
+        // if user changing password, include the below
         if($password !== null) 
         { 
             $query .= " 
@@ -115,8 +106,7 @@
             "; 
         } 
          
-        // Finally we finish the update query by specifying that we only wish 
-        // to update the one record with for the current user. 
+        // finish query
         $query .= " 
             WHERE 
                 id = :user_id 
@@ -124,27 +114,23 @@
          
         try 
         { 
-            // Execute the query 
+            // Run query 
             $stmt = $db->prepare($query); 
             $result = $stmt->execute($query_params); 
         } 
         catch(PDOException $ex) 
         { 
-            // Note: On a production website, you should not output $ex->getMessage(). 
-            // It may provide an attacker with helpful information about your code. 
+       
             die("Failed to run query: " . $ex->getMessage()); 
         } 
          
-        // Now that the user's E-Mail address has changed, the data stored in the $_SESSION 
-        // array is stale; we need to update it so that it is accurate. 
+        // update session info with new email
         $_SESSION['user']['email'] = $_POST['email']; 
          
-        // This redirects the user back to the members-only page after they register
+        // redirect user to main menu
         header("Location: mainmenu.php"); 
          
-        // Calling die or exit after performing a redirect using the header function
-        // is critical.  The rest of your PHP script will continue to execute and 
-        // will be sent to the user if you do not die or exit. 
+        // must call die
         die("Redirecting to mainmenu.php"); 
     } 
      
