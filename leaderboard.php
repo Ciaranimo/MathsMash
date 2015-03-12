@@ -13,14 +13,14 @@
         die("Redirecting to login.php"); 
     } 
 	
-		 $db = mysql_connect("localhost","root","root"); 
+		 /*$db = mysql_connect("localhost","root","root"); 
 				 if (!$db) {
 				 die("Database connection failed miserably: " . mysql_error());
 				 }
 				 $db_select = mysql_select_db("MathsServer",$db);
 					 if (!$db_select) {
 					 die("Database selection also failed miserably: " . mysql_error());
-					 }
+					 }*/
 					 
 	
 
@@ -55,7 +55,7 @@
     <body>
 			<div id="ldrbrd">
 				 <?php
-					$result = mysql_query("SELECT * FROM MathsServer", $db);
+					$result = $db->query("select * from user");
 					 if (!$result) {
 					 die("Database query failed: " . mysql_error());
 					 }
