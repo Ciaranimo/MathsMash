@@ -21,6 +21,7 @@
                 username, 
                 score
             FROM users
+            ORDER BY score DESC;
         "; 
          
         /*// parameter
@@ -85,10 +86,14 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
         $row = $stmt->fetch(); 
         if($row)
         {
-			echo "<table><tr><th>ID</th><th>Name</th><th>Score</th></tr>";
-			// output data of each row
+			echo "<table><tr><th>Pos.</th><th>Name</th><th>Score</th></tr>";
+			$count = 1;
+			// output data of first row
+			echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td></tr>";
+			// output data of next rows
 			while($row = $stmt->fetch()) {
-				echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td></tr>";
+				$count++;
+				echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td></tr>";
 			}
 			echo "</table>";
 		} else {
