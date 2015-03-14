@@ -1,4 +1,4 @@
-<?php
+<!--<?php
 
     // connect to DB
     require("common.php");
@@ -13,7 +13,7 @@
         die("Redirecting to login.php");
     }
 
-?>
+?>-->
 Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br />
 <a href="logout.php">Logout</a>
 <!DOCTYPE html>
