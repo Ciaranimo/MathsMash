@@ -142,10 +142,10 @@
         } 
          
         // redirect user to login page
-        header("Location: login.php"); 
+        header("Location: index.php"); 
          
         // redirect user 
-        die("Redirecting to login.php"); 
+        die("Redirecting to index.php"); 
     } 
      
 ?> 
