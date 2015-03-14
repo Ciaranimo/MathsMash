@@ -20,11 +20,6 @@ a{
     font-family: 'fonty'; /* sets default font to our font*/
 }
 
-
-#mash{
-    color: white; /*sets title mash button to white colour*/
-}
-
 #logoimg{ /*sets login page logo to set size*/
 	max-height: 150px;
 	max-width: 200px;
@@ -68,23 +63,18 @@ footer{ /*puts home button centre*/
 <!--main menu code-->
 
 .gameButton{ /*used for mainmenu buttons*/
-	margin-left: auto;
-    margin-right: auto;
-	height: 100px;
-	width: 150px;
-    border: solid black 1px;
-    font-family: 'fonty';
+    border: solid brown 2px;
+
+
 }
 
-a.gameButton{
-    font-family: 'fonty';
-}
+
 <!--CSS for Operators-->
 
 
 .opdisplay{ /*does nothing*/
 
-}
+ }
 
 #firstnum{ /*first gotten number styling MUST BE 3 IDS FOR JS*/
     width: 20%;

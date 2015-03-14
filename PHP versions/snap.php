@@ -1,21 +1,21 @@
-<?php 
+<?php
 
-    // connect to DB
+    // execute common code 
     require("common.php"); 
      
-    // Check whether user is logged in
+    // checked if logged in
     if(empty($_SESSION['user'])) 
     { 
-        // If they are not, redirect to the login page. 
+		//if not logged in, redirect 
         header("Location: login.php"); 
-         
-        // this statement is needed 
+
         die("Redirecting to login.php"); 
     } 
      
-?> 
+?>
 Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
 <a href="logout.php">Logout</a>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,46 +24,42 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script type="text/javascript">var actualUser = <?php echo json_encode(htmlentities($_SESSION['user']['username'])); ?>;</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+    </script>
+    <script src="jquery-2.1.1.min.js" type="text/javascript">
+    </script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="js/higherLowerJS.js"></script>
-    <!--<script> alert("username = " + actualUser);</script>-->
+    <script type="text/javascript" src="js/snapJS.js"></script>
     <script type="text/javascript" src="js/commonJS.js"></script>
-
     <title>
-        Higher or Lower
+        Snap
     </title>
 </head>
 
 <body onload="hide()">
 	<div class="page">
 		<h1 align="center">
-		  Higher or Lower
+		  Snap
 		</h1>
-		<div id="1" align="center">
-			Is:
-
-			<input type="text" value="" size="3" id="firstnum"> higher or lower than:
-
-			<input type="text" value="" size="3" id="secondnum">
-			<br>
-			<br>
-			<button id="but1" onclick="higher()">
-				Higher
-			</button>
-			<button id="but2" onclick="lower()">
-				Lower
-			</button>
-			<br>
-			<br>
-			<div id="time">
+		<div align="center">
+			<div id="leftBox">
 			</div>
+			<div id="rightBox">
+			</div>
+			<br>
+			<br>
 			<button id="butBegin" onclick="begin()">
 				Begin
 			</button>
 			<br>
+			<button id="snap" onclick="snapFunction()">
+				SNAP
+			</button>
+			<br>
+			<div id="time">
+			</div>
 			<br>
 			<div id="liveScoreUpdate">
 				<h2>
