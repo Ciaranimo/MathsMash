@@ -1,19 +1,48 @@
 <?php
 
     // connect to DB
-    require("common.php");
-
+    require("common.php"); 
+     
     // Check whether user is logged in
-    if(empty($_SESSION['user']))
+    if(empty($_SESSION['user'])) 
+    { 
+        // If they are not, redirect to the login page. 
+        header("Location: login.php"); 
+         
+        // this statement is needed 
+        die("Redirecting to login.php"); 
+    } 
+    else
     {
-        // If they are not, redirect to the login page.
-        header("Location: login.php");
-
-        // this statement is needed
-        die("Redirecting to login.php");
-    }
-
-?>
+     //get score from DB for leaderboard
+       $query = " 
+            SELECT 
+            	id,
+                username, 
+                score
+            FROM users
+            ORDER BY score DESC;
+        "; 
+         
+        /*// parameter
+        $query_params = array( 
+            ':username' => $_SESSION['user']['username']
+        );*/
+         
+        try 
+        { 
+            // run query
+            	$stmt = $db->prepare($query); 
+            	$result = $stmt->execute($query_params); 
+        } 
+        catch(PDOException $ex) 
+        { 
+            die("Failed to run query: " . $ex->getMessage()); 
+        } 
+        
+        
+	} 
+?> 
 
 <!DOCTYPE html>
 <html>
