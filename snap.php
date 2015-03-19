@@ -1,4 +1,4 @@
-<?php
+<?php 
 
     // execute common code 
     require("common.php"); 
