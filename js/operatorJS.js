@@ -6,7 +6,7 @@
       function begin() {
           setNum();
           show();
-          countdownTimer(5000);
+          countdownTimer(10000);
           hideBegin();
       }
 
@@ -23,7 +23,7 @@
           var mul = num1 * num2;
           var add = num1 + num2;
           var sub = num1 - num2;
-          var div = num1 / num2;
+		  var div = ((num1 / num2).toFixed(2));
           //array
           var arr;
           if (div == 0) {
@@ -70,7 +70,8 @@
       }
 
       function div() {
-          if (num1 / num2 == ans) {
+		var roundedAns = ((num1 / num2).toFixed(2));
+          if (roundedAns == ans) {
               count++;
               correct++;
               setNum();

@@ -99,6 +99,8 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 		  
 			<div id="time"> 
 			</div>
+			
+			<br>
 		   
 				<button id="butBegin" onclick="begin()">
 					Begin

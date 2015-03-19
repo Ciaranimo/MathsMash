@@ -12,6 +12,7 @@ function countdownTimer(number) {
 }
 
 function timerAlert() {
+
 	alert("Time up!\n You got " + correct + " out of " + count);
 	$('#firstnum').val("");
     $('#secondnum').val("");
@@ -23,8 +24,10 @@ function timerAlert() {
 	totalUpdatedScore = correct;
 	updatedTotalScore();
 	ajaxSubmit();
-    correct = 0;
+	correct = 0;
     count = 0;
+	
+    
     
 }
 
@@ -68,6 +71,7 @@ function hide() {
     $("#but3").hide();
     $("#but4").hide();
     $("#snap").hide();
+	$("#time").hide();
 }
 
 function show() {
@@ -77,6 +81,7 @@ function show() {
     $("#but3").show();
     $("#but4").show();
     $("#snap").show();
+	$("#time").show();
 
 }
 
