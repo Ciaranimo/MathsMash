@@ -28,22 +28,22 @@
 
 <div id="ldrbrd" align="center">
         <?php
-        $row = $stmt->fetch(); 
-        if($row)
-        {
-			echo "<table><tr><th>Pos.</th><th>Name</th><th>Score</th></tr>";
-			$count = 1;
-			// output data of first row
-			echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td></tr>";
-			// output data of next rows
-			while($row = $stmt->fetch()) {
-				$count++;
+			$row = $stmt->fetch(); 
+			if($row)
+			{
+				echo "<table><tr><th>Pos.</th><th>Name</th><th>Score</th></tr>";
+				$count = 1;
+				// output data of first row
 				echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td></tr>";
+				// output data of next rows
+				while($row = $stmt->fetch()) {
+					$count++;
+					echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td></tr>";
+				}
+				echo "</table>";
+			} else {
+				echo "0 results";
 			}
-			echo "</table>";
-		} else {
-			echo "0 results";
-		}
         
         ?>
 </div>
