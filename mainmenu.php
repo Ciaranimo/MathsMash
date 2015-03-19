@@ -7,10 +7,10 @@
     if(empty($_SESSION['user'])) 
     { 
         // If they are not, redirect to the login page. 
-        header("Location: index.php"); 
+        header("Location: login.php"); 
          
         // this statement is needed 
-        die("Redirecting to index.php"); 
+        die("Redirecting to login.php"); 
     } 
     else
     {
