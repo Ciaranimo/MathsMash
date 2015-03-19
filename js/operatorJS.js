@@ -1,19 +1,19 @@
       //numbers
       var num1, num2, ans, count = 0,
           correct = 0,
-           timer;
+           timer, totalUpdatedScore=0;
 
       function begin() {
           setNum();
           show();
-          countdownTimer(10000);
+          countdownTimer(5000);
           hideBegin();
       }
 
       function setNum() {
           //set numbers
           num1 = document.getElementById("firstnum").innerHTML=(Math.floor(Math.random() * 100));
-num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() * 100));
+		  num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() * 100));
           $('#firstnum').val(num1);
           $('#secondnum').val(num2);
           $('#currentScore').val(correct);

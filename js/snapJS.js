@@ -1,11 +1,11 @@
       var ran1, ran2, count = 0, correct = 0,
-          myTime, timer;
+          myTime, timer, totalUpdatedScore=0;
 
       function begin() {
           generateNums();
           hideBegin();
           setNum();
-          countdownTimer(10000);
+          countdownTimer(5000);
           myTime = setInterval(setBackgroundTimer, 550);
 
       }

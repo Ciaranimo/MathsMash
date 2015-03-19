@@ -3,7 +3,7 @@ function countdownTimer(number) {
     if (number == 0) {
         timerAlert();
     } else {
-        $("#time").html("<h1> Timer: " + number / 1000 + "</h1>");
+        $("#time").html("<h1> " + number / 1000 + "</h1>");
         timer = setTimeout(function() {
             countdownTimer(number - 1000)
         }, 1000)
@@ -12,22 +12,20 @@ function countdownTimer(number) {
 }
 
 function timerAlert() {
-	
-    $('#firstnum').val("");
+	alert("Time up!\n You got " + correct + " out of " + count);
+	$('#firstnum').val("");
     $('#secondnum').val("");
     $('#currentScore').val("");
     $('#totalPlays').val("");
-    alert("Time up!\n You got " + correct + " out of " + count);
+	hide();
+    showBegin();
+	stopTimer();
 	totalUpdatedScore = correct;
 	updatedTotalScore();
 	ajaxSubmit();
     correct = 0;
     count = 0;
-    hide();
-    showBegin();
-	stopTimer();
-
-
+    
 }
 
 function ajaxSubmit() {
