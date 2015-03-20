@@ -1,8 +1,3 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 @font-face { /*imports font*/
     font-family: fonty;
@@ -67,6 +62,15 @@ footer{ /*puts home button centre*/
 
 
 }
+
+<!---Snap ---->
+
+   #leftBox{
+       background: cyan;
+       width: 20%;
+       min-height: 60px;
+       padding-top: 40px;
+   }
 
 
 <!--CSS for Operators-->
@@ -211,3 +215,6 @@ th{
 text-align: center;
 		
 }
+
+
+    
