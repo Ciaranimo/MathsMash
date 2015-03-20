@@ -44,19 +44,30 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 		<h1 align="center">
 		  Next In Sequence Game
 		</h1>
-		<div id="2" align="center">
-			Num1:
-			<input type="text" value="" id="fNum" /> Num2:
-			<input type="text" value="" id="sNum" /> Num3:
-			<input type="text" value="" id="tNum" /> Num4:
-			<input type="text" value="" id="answer" />
-			<br>
-			<br>
+		<div class="content">
+            <div class="seqdisplay">
+                <div class="seqnums">
+                    Num1:
+                    <input type="text" value="" id="fNum" /> 
+                </div>
+                <div class="seqnums">
+                    Num2:
+                    <input type="text" value="" id="sNum" /> 
+                </div>
+                <div class="seqnums">
+                    Num3:
+                    <input type="text" value="" id="tNum" /> 
+                </div>
+                <div class="seqnums">
+                    Num4:
+                    <input type="text" value="" id="answer" />
+                </div>
+           </div>
+			<div class="seqbuttons">
 			<button id="butBegin" onclick="begin()">
 				Begin
 			</button>
-			<br>
-			<br>
+			
 			<button id="but1" onclick="one()">
 				Add
 			</button>
@@ -69,13 +80,10 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 			<button id="but4" onclick="four()">
 				Add
 			</button>
-			<br>
-			<br>
-			<br>
+            </div>
 			<div id="time">
 			</div>
-			<br>
-			<br>
+			
 		</div>
 		<div id="liveScoreUpdate" align="center">
 			<h2>

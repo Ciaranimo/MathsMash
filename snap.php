@@ -16,6 +16,8 @@
 Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
 <a href="logout.php">Logout</a>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,6 +38,28 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <title>
         Snap
     </title>
+    <style>
+         #leftBox{
+           background: cyan;
+           width: 20%;
+           min-height: 80px;
+           padding-top: 30px;
+             font-size: 30px;
+            font-weight:bolder;
+        }
+        
+        #rightBox{
+           background: purple;
+           width: 20%;
+           min-height: 80px;
+           padding-bottom: 30px;
+             font-size: 30px;
+            font-weight:bolder;
+            color: cyan;
+        }
+    
+    </style>
+    
 </head>
 
 <body onload="hide()">
