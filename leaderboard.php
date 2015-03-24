@@ -55,7 +55,7 @@
 </head>
 <body>
 
-<div id="ldrbrd" align="center">
+<div class="ldrbrd" align="center">
 		<br>
 		<h1> Leaderboard </h1?>
 		<br>
