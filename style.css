@@ -9,9 +9,8 @@ a{
 	text-decoration: none; /* removes underlining from all links */
 }
 
-body{
-background-image: "bluelinen.png";
-
+body {
+    background-image: url("bluelinen.png");
 }
 
 .page{
