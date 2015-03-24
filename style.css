@@ -9,11 +9,17 @@ a{
 	text-decoration: none; /* removes underlining from all links */
 }
 
+body{
+background-image: "bluelinen.png";
+
+}
+
 .page{
     text-align: center;
 	color: purple; /*sets default text color everywhere to purple */
     font-family: 'fonty'; /* sets default font to our font*/
 }
+
 
 #logoimg{ /*sets login page logo to set size*/
 	max-height: 150px;
