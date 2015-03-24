@@ -20,37 +20,21 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 <a href="edit_account.php">Edit your account</a>-->
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta content='width=device-width, initial-scale=1' name='viewport'/>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Maths Mash</title>
-
-</head>
-<body>
-    <div class="page">
-
-        <header>
-		<br/>
-        </header>
-        <div id="content">
-		
-			<div class="gameButton">
-				<div class="gameButtonText">
-					<a href="gamemenu.php">Games</a>
-				</div>
-			</div>
-			<div class="gameButton">
-				<div class="gameButtonText">
-					<a href="leaderboard.php">Leaderboard</a>
-				</div>
-			</div>
-        </div>
-        <div id="ldrbrd" align="center">
-			
-		</div>
+    <head>
+     <link rel="stylesheet" type="text/css" href="style.css">   
+    </head>
+    <body>
+    
+    <a href="gamemenu.php" class="buttonkev"> Game Menu</a>
+    <a href="leaderboard.php" class="buttonkev"> Leaderboard</a>  
+    <a href="profile.php" class="buttonkev"> Profile</a>
+    
+    
+    
+    </body>
 
 
-    </div>
-</body>
+
+
+
 </html>
