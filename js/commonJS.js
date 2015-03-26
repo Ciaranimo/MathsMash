@@ -37,7 +37,7 @@ function ajaxSubmit() {
 	//var user = "<?php echo $_SESSION['user']; ?>";
 	var userID = actualUser;
 	// Fetch data to be posted
-	allData = "playerName="+userID+"&score="+score;
+	var allData = "playerName="+userID+"&score="+score;
 	
 	// Setup the ajax request
 	$.ajax({

@@ -79,7 +79,10 @@
 			}
         
         ?>
-</div>
+</div><br>
+<a href="mainmenu.php">
+          <img src="images/HomeButton.jpg" alt="HIGHER OR LOWER" style="width:50px;height:50px;border:0">
+        </a>
 
 </body>
 </html>

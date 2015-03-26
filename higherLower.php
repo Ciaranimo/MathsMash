@@ -35,6 +35,13 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <title>
         Higher or Lower
     </title>
+    <style>
+    #firstnum, #secondnum{
+    font-size:40px;
+    text-align:center;
+    }
+    
+    </style>
 </head>
 
 <body onload="hide()">

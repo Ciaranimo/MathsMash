@@ -7,10 +7,10 @@
     if(empty($_SESSION['user'])) 
     { 
         // If they are not, redirect to the login page. 
-        header("Location: login.php"); 
+        header("Location: index.php"); 
          
         // this statement is needed 
-        die("Redirecting to login.php"); 
+        die("Redirecting to index.php"); 
     } 
     
 ?> 
@@ -21,7 +21,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 <!DOCTYPE html>
 <html>
     <head>
-     <link rel="stylesheet" type="text/css" href="style.css">   
+     <link rel="stylesheet" type="text/css" href="style.css"/>   
     </head>
     <body>
     

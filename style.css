@@ -82,10 +82,26 @@ footer{ /*puts home button centre*/
     display: inline-block;
     width: 60px;
     margin-top: 100px;
+    font-size: 40px;
+}
+
+#fNum, #sNum, #tNum, #answer{
+  font-size: 40px;
+  text-align: center;
+  border: none;
+}
+
+#qMark{
+  font-size: 40px;
+}
+
+#but1,#but2,#but3,#but4{
+  padding: 20px;
+  font-size: 30px;
 }
 
 .seqdisplay{
-    margin-bottom: 10%;   
+    margin-bottom: 4%;   
     
 }
 
@@ -103,8 +119,9 @@ footer{ /*puts home button centre*/
     display:inline-block;
     color: #6B238E;
     padding: 2%;
-	font-size: 15px;
+	font-size: 40px;
 	font-weight: bold;
+  border: none;
 }
 
 #secondnum{ /*second gotten number styling MUST BE 3 IDS FOR JS*/
@@ -112,8 +129,9 @@ footer{ /*puts home button centre*/
     display: inline-block;
     color: #6B238E;
     padding: 2%;
-	font-size: 15px;
+	font-size: 40px;
 	font-weight: bold;
+  border: none;
 }
 
 #ans{ /*answer number styling MUST BE 3 IDS FOR JS*/
@@ -123,7 +141,7 @@ footer{ /*puts home button centre*/
     padding: 2%;
 	font-family: 'fonty';
 	border: none;
-	font-size: 15px;
+	font-size: 40px;
 	font-weight: bold;
 }
 
@@ -189,6 +207,7 @@ button#butBegin{ /*ldrbrd begin button in operators*/
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 6px;
+    font-size: 15px;
 }
 
 <!-- Ripple code -->
@@ -223,6 +242,7 @@ ripple { to {
 }
 
 .ldrbrd {
+  align:center;
 	margin:0px;padding:0px;
 	width:65%;
 	box-shadow: 10px 10px 5px #888888;
@@ -329,7 +349,7 @@ ripple { to {
   /*Text ldrbrds*/
   color: white;
   text-align: center;
-  font: 2.5em/100px "Arial";
+  font: 2.5em/100px "fonty";
   /*Fancy CSS3 ldrbrds */
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;

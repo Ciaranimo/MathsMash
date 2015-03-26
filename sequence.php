@@ -7,10 +7,10 @@
     if(empty($_SESSION['user'])) 
     { 
         // If they are not, redirect to the login page. 
-        header("Location: login.php"); 
+        header("Location: index.php"); 
          
         // this statement is needed 
-        die("Redirecting to login.php"); 
+        die("Redirecting to index.php"); 
     } 
      
 ?> 
@@ -47,20 +47,20 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 		<div class="content">
             <div class="seqdisplay">
                 <div class="seqnums">
-                    Num1:
+                    
                     <input type="text" value="" id="fNum" /> 
                 </div>
                 <div class="seqnums">
-                    Num2:
+                    
                     <input type="text" value="" id="sNum" /> 
                 </div>
                 <div class="seqnums">
-                    Num3:
+                    
                     <input type="text" value="" id="tNum" /> 
                 </div>
                 <div class="seqnums">
-                    Num4:
-                    <input type="text" value="" id="answer" />
+                    
+                    <p id="qMark">?</p>
                 </div>
            </div>
 			<div class="seqbuttons">
