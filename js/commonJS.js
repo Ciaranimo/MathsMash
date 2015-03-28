@@ -13,7 +13,7 @@ function countdownTimer(number) {
 
 function timerAlert() {
 
-	alert("Time up!\n You got " + correct + " out of " + count);
+	/*alert("Time up!\n You got " + correct + " out of " + count); */ //have edited this out for now
 	$('#firstnum').val("");
     $('#secondnum').val("");
     $('#currentScore').val("");
@@ -29,6 +29,16 @@ function timerAlert() {
 	
     
     
+}
+
+function resetStats() {
+
+    var rs;
+    if (confirm("Are you sure?") == true) {
+        rs = UPDATE score
+             SET TO 0
+             WHERE user = [username};
+    }
 }
 
 function ajaxSubmit() {
@@ -52,6 +62,43 @@ function ajaxSubmit() {
 	// return false so the page does not actually change
 	return false;		
 };
+
+function levelUp(){
+
+	score = getScoreFromDatabase;
+ 
+	if(score<10){
+		level=1;
+	}
+	else if(level>=10&&<20){
+		level=2;
+	}
+	else if(level>=20&&<40){
+		level=3;
+	}
+	else if(level>=40&&<80){
+		level=4;
+	}
+	else if(level>=80&&<160){
+		level=5;
+	}
+	else if(level>=160&&<320){
+		level=6;
+	}
+	else if(level>=320&&<640){
+		level=7;
+	}
+	else if(level>=640&&<1280){
+		level=8;
+	}
+	else if(level>=1280&&<2560){
+		level=9;
+	}
+	else if(level>=2560){
+		level=10;
+	}
+	
+}
 
 function updatedTotalScore(){
 	$('#finalScore').val(totalUpdatedScore);

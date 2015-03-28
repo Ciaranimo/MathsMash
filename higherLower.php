@@ -94,6 +94,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 					<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
 				</a>
 			</div>
+			
 		</div>
 	</div>
 	
