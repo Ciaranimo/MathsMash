@@ -36,13 +36,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <script type="text/javascript" src="js/snapJS.js"></script>
     <script type="text/javascript" src="js/commonJS.js"></script>
 	
-	
-	//coding for adding how button
-	<link rel="stylesheet" type="text/css" href="mainmenu.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	tp://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>
         Snap
     </title>
@@ -76,7 +70,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 		  Snap
 		</h1>
 		<div align="center">
-			<div id="leftBox" id="demo">
+			<div id="leftBox">
 			</div>
 			<div id="rightBox">
 			</div>
@@ -110,18 +104,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 		</div>
 	</div>
 	
-	//code for adding how button
-	<div id="pageone" data-role="main" class="ui-content">
-        
-   <a href="#myPopup" data-rel="popup" data-position-to="#demo" data-transition="flip">
-    <img src="infoBtn.png" alt="Info" style="width:50px;"></a>
-     
-     
- <div data-role="popup" id="myPopup" data-overlay-theme="b">
-      <p>How to Play</p> 
-      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="operatorsHow.jpg" style="width:300px;height:400px;">
-    </div>
-  </div>    
+	
      
 </body>
 
