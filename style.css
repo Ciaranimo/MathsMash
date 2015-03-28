@@ -372,5 +372,50 @@ a.buttonkev {
   text-decoration: none;
 }
 
+.buttonHow {
+  /*Basic Button Styles*/
+  display: block;
+  height: 50px;
+  width: 175px;
+  background: purple;
+  border: 2px solid rgba(33,68,72,0.59);
+  margin: 40px auto;
+  /*Text Styles*/
+  color: white;
+  text-align: center;
+  font: 2.5em/50px "Arial";
+  /*Fancy CSS3 Styles */
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 4px 0 #1b383b;
+  -moz-box-shadow: 0 4px 0 #1b383b;
+  -ms-box-shadow: 0 4px 0 #1b383b;
+  -o-box-shadow: 0 4px 0 #1b383b;
+  box-shadow: 0 4px 0 #1b383b;
+  text-shadow: 0 2px 2px rgba(255,255,255,0.4);
+}
 
-    
+
+.How{
+    border: 2px solid #a1a1a1;
+    padding: 10px 10px; 
+    background: #dddddd;
+    width: 300px;
+    border-radius: 25px;
+    margin:0 auto;
+}
+
+.howImage {
+    display: block;
+    margin:0 auto;
+}
+  a.buttonHow {
+  -webkit-text-decoration: none;
+  -moz-text-decoration: none;
+  -ms-text-decoration: none;
+  -o-text-decoration: none;
+  text-decoration: none;
+}  
