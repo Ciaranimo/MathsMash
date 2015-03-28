@@ -55,9 +55,9 @@
 </head>
 <body>
 
-<div id="ldrbrd" align="center">
+<div class="ldrbrd" align="center">
 		<br>
-		<h1> Leaderboard </h1>
+		<h1> Leaderboard </h1?>
 		<br>
 		<br>
 		
@@ -80,7 +80,10 @@
 			}
         
         ?>
-</div>
+</div><br>
+<a href="mainmenu.php">
+          <img src="images/HomeButton.jpg" alt="HIGHER OR LOWER" style="width:50px;height:50px;border:0">
+        </a>
 
 </body>
 </html>
