@@ -35,8 +35,6 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="js/snapJS.js"></script>
     <script type="text/javascript" src="js/commonJS.js"></script>
-	
-	tp://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>
         Snap
     </title>
@@ -103,9 +101,6 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 			</div>
 		</div>
 	</div>
-	
-	
-     
 </body>
 
 </html>

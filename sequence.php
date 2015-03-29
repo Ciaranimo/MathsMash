@@ -34,10 +34,6 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <script type="text/javascript" src="js/commonJS.js"></script>
     <script type="text/javascript" src="js/sequenceJS.js"></script>
 
-	
-	
-	
-	
     <title>
         Sequence
     </title>
@@ -104,7 +100,6 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 			</a>
 		</div>
 	</div>
-	
 </body>
 
 </html>

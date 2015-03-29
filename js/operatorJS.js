@@ -1,7 +1,7 @@
       //numbers
       var num1, num2, ans, count = 0,
           correct = 0,
-           timer, totalUpdatedScore=0;
+           timer;
 
       function begin() {
           setNum();
@@ -13,7 +13,7 @@
       function setNum() {
           //set numbers
           num1 = document.getElementById("firstnum").innerHTML=(Math.floor(Math.random() * 100));
-		  num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() * 100));
+num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() * 100));
           $('#firstnum').val(num1);
           $('#secondnum').val(num2);
           $('#currentScore').val(correct);
@@ -23,7 +23,7 @@
           var mul = num1 * num2;
           var add = num1 + num2;
           var sub = num1 - num2;
-		  var div = ((num1 / num2).toFixed(2));
+          var div = num1 / num2;
           //array
           var arr;
           if (div == 0) {
@@ -70,8 +70,7 @@
       }
 
       function div() {
-		var roundedAns = ((num1 / num2).toFixed(2));
-          if (roundedAns == ans) {
+          if (num1 / num2 == ans) {
               count++;
               correct++;
               setNum();

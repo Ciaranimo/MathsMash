@@ -12,12 +12,21 @@
         // this statement is needed 
         die("Redirecting to index.php"); 
     } 
+    else
+    {
+    	require("topMenu.php");
+    }    
     
 ?> 
 
-Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
-<a href="logout.php">Logout</a>--><br>
-<a href="edit_account.php">Edit your account</a>-->
+<div id="topMenu"> Welcome <b><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></b>.<br />
+Your Score: <?php echo $row["score"];?><br/>
+Level: <?php echo $row["level"];?><br/>
+Points until next level: <br/>
+__________________<br/>
+<a href="logout.php"><b>Logout</a>--><br>
+<a href="edit_account.php">Edit your account</b></a>-->
+</div>
 <!DOCTYPE html>
 <html>
     <head>

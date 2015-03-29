@@ -32,8 +32,6 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <!--<script> alert("username = " + actualUser);</script>-->
     <script type="text/javascript" src="js/commonJS.js"></script>
 
-	
-	
     <title>
         Higher or Lower
     </title>
@@ -88,12 +86,8 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 					<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
 				</a>
 			</div>
-			
 		</div>
 	</div>
-	
-	
-	
 </body>
 
 </html>

@@ -1,5 +1,5 @@
       var ran1, ran2, count = 0, correct = 0,
-          myTime, timer, totalUpdatedScore=0;
+          myTime, timer;
 
       function begin() {
           generateNums();

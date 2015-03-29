@@ -60,7 +60,6 @@
 		<h1> Leaderboard </h1?>
 		<br>
 		<br>
-		
         <?php
 			$row = $stmt->fetch(); 
 			if($row)

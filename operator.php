@@ -54,7 +54,6 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 
 		document.addEventListener('click', addRippleEffect, false);
 	</script>
-
     <title>
         Operator
     </title>
@@ -122,10 +121,8 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 				<br>
 			   
 			</div>
-		</div>
-
+		</div>	
 		
-
 
 		<footer>
 			 <a href="gamemenu.php">
