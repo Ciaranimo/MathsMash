@@ -1,0 +1,233 @@
+
+@font-face { /*imports font*/
+    font-family: fonty;
+    src: url(Fonts/Quicksand-Light.otf);
+}
+
+
+a{
+	text-decoration: none; /* removes underlining from all links */
+}
+
+.page{
+    text-align: center;
+	color: purple; /*sets default text color everywhere to purple */
+    font-family: 'fonty'; /* sets default font to our font*/
+}
+
+#logoimg{ /*sets login page logo to set size*/
+	max-height: 150px;
+	max-width: 200px;
+
+}
+
+.gameicons{ /* sets size of images for game selection screen, possibly will be replaced with ripple links*/
+	max-height: 150px;
+	max-width: 200px;
+	width: 140px;
+	height: 140px;
+	border: solid purple 1px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+	cursor: pointer;
+	margin: 10px 0 0 0;
+}
+
+
+.button{ /*sets background color of operator buttons, button spacing and the curved edges*/
+    background-color: #6B238E;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+	font-family: 'fonty';
+	font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+footer{ /*puts home button centre*/
+    margin: 0 auto;
+   
+}
+
+<!--main menu code-->
+
+.gameButton{ /*used for mainmenu buttons*/
+    border: solid brown 2px;
+
+
+}
+
+<!---Snap ---->
+
+   #leftBox{
+       background: cyan;
+       width: 20%;
+       min-height: 60px;
+       padding-top: 40px;
+   }
+
+<!--Sequence---->
+.seqnums{
+    display: inline-block;
+    width: 60px;
+    margin-top: 100px;
+}
+
+.seqdisplay{
+    margin-bottom: 10%;   
+    
+}
+
+
+
+<!--CSS for Operators-->
+
+
+.opdisplay{ /*does nothing*/
+
+ }
+
+#firstnum{ /*first gotten number styling MUST BE 3 IDS FOR JS*/
+    width: 20%;
+    display:inline-block;
+    color: #6B238E;
+    padding: 2%;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#secondnum{ /*second gotten number styling MUST BE 3 IDS FOR JS*/
+    width:20%;
+    display: inline-block;
+    color: #6B238E;
+    padding: 2%;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#ans{ /*answer number styling MUST BE 3 IDS FOR JS*/
+    width:20%;
+    display:inline-block;
+    color: #6B238E;
+    padding: 2%;
+	font-family: 'fonty';
+	border: none;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.guess{ /*box to represent user guess*/
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: solid #6B238E 1px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+	
+}
+#equalsOP{ /*just for the equals sign*/
+	display: inline;
+	color: #6B238E;
+	font-weight: bold;
+}
+
+
+.op-buttons-top{ /*centres the top 2 buttons in operators*/
+    margin: 0 auto;
+}
+
+.op-buttons-btm{ /*centres the top 2 buttons*/
+    margin: 0 auto;
+}
+
+.opbtn { /*for each operator button styling*/
+	width: 90px;	
+	height: 90px;
+	font-size: 50px;
+    background-color: #6B238E;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+	font-family: 'fonty';
+    margin-bottom: 10px;       
+}
+
+
+button { /*applies ripple on every button*/
+  position: relative;
+  border: none;
+  outline: none;
+  letter-spacing: .2em;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button#butBegin{ /*style begin button in operators*/
+    font-family: 'fonty';
+    border: solid black 1px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+}
+
+<!-- Ripple code -->
+
+.ripple {
+  position: absolute;
+  background: rgba(0,0,0,.25);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.ripple.show {
+  -webkit-animation: ripple .5s ease-out;
+  animation: ripple .5s ease-out;
+}
+
+@-webkit-keyframes 
+ripple { to {
+ -webkit-transform: scale(1.5);
+ transform: scale(1.5);
+ opacity: 0;}
+}
+
+@keyframes 
+ripple { to {
+ -webkit-transform: scale(1.5);
+ transform: scale(1.5);
+ opacity: 0;}
+}
+
+ldrbrd{
+			
+}
+table, th, td{
+padding: 5px;
+border: 1px solid black;
+}
+th{
+text-align: center;
+		
+}
+
+
+    
