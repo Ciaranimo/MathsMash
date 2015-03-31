@@ -24,7 +24,7 @@ a{
 }
 
 body {
-    background-image: url("bg.png");
+    background-image: url("bluelinen.png");
 }
 
 .page{
@@ -96,14 +96,13 @@ footer{ /*puts home button centre*/
     display: inline-block;
     width: 60px;
     margin-top: 100px;
+    font-size: 40px;
 }
 
 #fNum, #sNum, #tNum, #answer{
   font-size: 40px;
   text-align: center;
   border: none;
-    background: none;
-    width: 30%;
 }
 
 #qMark{
@@ -116,8 +115,7 @@ footer{ /*puts home button centre*/
 }
 
 .seqdisplay{
-    width: 80%;
-    margin: 0 auto;
+    margin-bottom: 4%;   
     
 }
 

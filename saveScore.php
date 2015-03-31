@@ -14,10 +14,14 @@
 	// Get data posted with Ajax
 	$playerName 			= $_POST["playerName"];
 	$score	 				= $_POST["score"];
+	$level					= $_POST["level"];
 
 	// Save data to database
-	$query = " UPDATE users SET score = score + '$score' WHERE username = '$playerName' ";
+	$query = " UPDATE users SET score = score + '$score', level = '$level' WHERE username = '$playerName' ";
 	$saveData = mysqli_query($conx, $query);
+	
+	//set level
+	
 
 	if($saveData){
 		echo "Data was saved successfully!";

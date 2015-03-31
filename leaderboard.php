@@ -19,7 +19,7 @@
             SELECT 
             	id,
                 username, 
-                score
+                score, level
             FROM users
             ORDER BY score DESC;
         "; 
@@ -64,14 +64,14 @@
 			$row = $stmt->fetch(); 
 			if($row)
 			{
-				echo "<table><tr><th>Pos.</th><th>Name</th><th>Score</th></tr>";
+				echo "<table><tr><th>Pos.</th><th>Name</th><th>Score</th><th>Level</th></tr>";
 				$count = 1;
 				// output data of first row
-				echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td></tr>";
+				echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td><td>" . $row["level"]. "</td></tr>";
 				// output data of next rows
 				while($row = $stmt->fetch()) {
 					$count++;
-					echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td></tr>";
+					echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td><td>" . $row["level"]. "</td></tr>";
 				}
 				echo "</table>";
 			} else {
