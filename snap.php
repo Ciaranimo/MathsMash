@@ -1,4 +1,4 @@
-<!--<?php
+<?php 
 
     // execute common code 
     require("common.php"); 
@@ -7,14 +7,20 @@
     if(empty($_SESSION['user'])) 
     { 
 		//if not logged in, redirect 
-        header("Location: login.php"); 
+        header("Location: index.php"); 
 
-        die("Redirecting to login.php"); 
+        die("Redirecting to index.php"); 
     } 
+    else
+    {
+    	require("topMenu.php");
+    }   
      
 ?>
 Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
-<a href="logout.php">Logout</a>-->
+<a href="logout.php">Logout</a>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +30,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script type="text/javascript">var actualUser = <?php echo json_encode(htmlentities($_SESSION['user']['username'])); ?>;</script>
+    <script type="text/javascript">var myscore = <?php echo $row["score"];?>; alert("score is "+myscore);</script>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
     </script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
@@ -36,6 +43,28 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
     <title>
         Snap
     </title>
+    <style>
+         #leftBox{
+           background: cyan;
+           width: 20%;
+           min-height: 80px;
+           padding-top: 30px;
+             font-size: 30px;
+            font-weight:bolder;
+        }
+        
+        #rightBox{
+           background: purple;
+           width: 20%;
+           min-height: 80px;
+           padding-bottom: 30px;
+             font-size: 30px;
+            font-weight:bolder;
+            color: cyan;
+        }
+    
+    </style>
+    
 </head>
 
 <body onload="hide()">
@@ -71,7 +100,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 				<br>
 				<br>
 				<br>
-				<a href="gamemenu.html">
+				<a href="gamemenu.php">
 					<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
 				</a>
 			</div>

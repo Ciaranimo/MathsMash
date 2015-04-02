@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     // connect to DB
     require("common.php"); 
@@ -12,66 +12,77 @@
         // this statement is needed 
         die("Redirecting to login.php"); 
     } 
-	
-		 /*$db = mysql_connect("localhost","root","root"); 
-				 if (!$db) {
-				 die("Database connection failed miserably: " . mysql_error());
-				 }
-				 $db_select = mysql_select_db("MathsServer",$db);
-					 if (!$db_select) {
-					 die("Database selection also failed miserably: " . mysql_error());
-					 }*/
-					 
-	
-
+    else
+    {
+     //get score from DB for leaderboard
+       $query = " 
+            SELECT 
+            	id,
+                username, 
+                score, level
+            FROM users
+            ORDER BY score DESC;
+        "; 
+         
+        /*// parameter
+        $query_params = array( 
+            ':username' => $_SESSION['user']['username']
+        );*/
+         
+        try 
+        { 
+            // run query
+            	$stmt = $db->prepare($query); 
+            	$result = $stmt->execute($query_params); 
+        } 
+        catch(PDOException $ex) 
+        { 
+            die("Failed to run query: " . $ex->getMessage()); 
+        } 
+        
+        
+	} 
 ?> 
 
 <!DOCTYPE html>
 <html>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="jquery-2.1.1.min.js" type="text/javascript"></script>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="js/leaderboard.js"></script>
-    <!--<script type="text/javascript" src="js/commonJS.js"></script>-->
-        <title>Leaderboard</title>
-		<style>
-			ldrbrd{
-			
-			}
-			table, th, td{
-				padding: 5px;
-				border: 1px solid black;
-			}
-			th{
-				text-align: center;
-			
-			}
-		</style>
-    </head>
-    <body>
-			<div id="ldrbrd">
-				 <?php
-					$result = $db->query("select * from user");
-					 if (!$result) {
-					 die("Database query failed: " . mysql_error());
-					 }
-					 while ($row = mysql_fetch_array($result)) {
-					 echo "<h2>";
-					 echo $row[1]."";
-					 echo "</h2>";
-					 echo "<p>";
-					 echo $row[2]."";
-					 echo "</p>";
-					 }
-					?>
-				</div>
-    </body>
-</html>
+    <title>Leaderboard</title>
 
-<?php
- mysql_close($db);
-?>
+</head>
+<body>
+
+<div class="ldrbrd" align="center">
+		<br>
+		<h1> Leaderboard </h1?>
+		<br>
+		<br>
+        <?php
+			$row = $stmt->fetch(); 
+			if($row)
+			{
+				echo "<table><tr><th>Pos.</th><th>Name</th><th>Score</th><th>Level</th></tr>";
+				$count = 1;
+				// output data of first row
+				echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td><td>" . $row["level"]. "</td></tr>";
+				// output data of next rows
+				while($row = $stmt->fetch()) {
+					$count++;
+					echo "<tr><td>" . $count. "</td><td>" . $row["username"]. "</td><td> " . $row["score"]. "</td><td>" . $row["level"]. "</td></tr>";
+				}
+				echo "</table>";
+			} else {
+				echo "0 results";
+			}
+        
+        ?>
+</div><br>
+<a href="mainmenu.php">
+          <img src="images/HomeButton.jpg" alt="HIGHER OR LOWER" style="width:50px;height:50px;border:0">
+        </a>
+
+</body>
+</html>
