@@ -61,38 +61,37 @@ function ajaxSubmit() {
 
 function setLevel(){
 
-
-if(myscore<10){
-    level=1;
-}
-else if(myscore>=10&&myscore<20){
-    level=2;
-}
-else if(myscore>=20&&myscore<40){
-    level=3;
-}
-else if(myscore>=40&&myscore<80){
-    level=4;
-}
-else if(myscore>=80&&myscore<160){
-    level=5;
-}
-else if(myscore>=160&&myscore<320){
-    level=6;
-}
-else if(myscore>=320&&myscore<640){
-    level=7;
-}
-else if(myscore>=640&&myscore<1280){
-    level=8;
-}
-else if(myscore>=1280&&myscore<2560){
-    level=9;
-}
-else if (myscore>=2560){
-    level=10;
-}
-alert("level = " + level);
+	if(myscore<10){
+		level=1;
+	}
+	else if(myscore>=10&&myscore<20){
+		level=2;
+	}
+	else if(myscore>=20&&myscore<40){
+		level=3;
+	}
+	else if(myscore>=40&&myscore<80){
+		level=4;
+	}
+	else if(myscore>=80&&myscore<160){
+		level=5;
+	}
+	else if(myscore>=160&&myscore<320){
+		level=6;
+	}
+	else if(myscore>=320&&myscore<640){
+		level=7;
+	}
+	else if(myscore>=640&&myscore<1280){
+		level=8;
+	}
+	else if(myscore>=1280&&myscore<2560){
+		level=9;
+	}
+	else if (myscore>=2560){
+		level=10;
+	}
+	alert("level = " + level);
 
 };
 

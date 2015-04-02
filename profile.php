@@ -41,7 +41,20 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 
 <body>
 	<div align="center">
-		<button id="profilePage" onclick="resetStats()">Reset Score</button>
+		<!--set icon based on level-->
+		<div id="icon"> </div>
+		<br>
+		<!--set name based on session-->
+		<div id="profileName">
+			Name: <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> 
+		</div>
+		<br>
+		<!--set level based on database-->
+		<div id="profileLevel">
+			Level: 
+		</div>
+		
+		
 	</div>	
 </body>
 

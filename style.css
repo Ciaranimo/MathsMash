@@ -395,5 +395,15 @@ a.buttonkev {
   text-decoration: none;
 }
 
+#profileName{
+	font-size: 75px;
+	font-family: fonty;
+}
+
+#profileLevel{
+	font-size: 75px;
+	font-family: fonty;
+}
+
 
     
