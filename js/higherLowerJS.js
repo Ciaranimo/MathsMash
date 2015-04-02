@@ -31,7 +31,7 @@ function higher() {
 
     if (randomNum > randomNum2) {
         count++;
-        correct++;
+        correct=correct+2;
         setNum();
     } else {
         count++;
@@ -44,7 +44,7 @@ function higher() {
 function lower() {
 
     if (randomNum < randomNum2) {
-        correct++;
+        correct=correct+2;
         count++;
         setNum();
     } else {

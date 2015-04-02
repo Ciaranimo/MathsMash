@@ -45,7 +45,7 @@
 
           if (ran1 == ran2) {
 
-              correct=correct+20;
+              correct++;
 			  count++;
 
           } else {

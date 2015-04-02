@@ -77,7 +77,7 @@ function setNum() {
 
 function one() {
     if (arr3[0] == int4) {
-        correct++;
+        correct=correct+4;
         count++;
         setNum();
     } else {
@@ -88,7 +88,7 @@ function one() {
 
 function two() {
     if (arr3[1] == int4) {
-        correct++;
+        correct=correct+4;
         count++;
         setNum();
     } else {
@@ -99,7 +99,7 @@ function two() {
 
 function three() {
     if (arr3[2] == int4) {
-        correct++;
+        correct=correct+4;
         count++;
         setNum();
     } else {
@@ -110,7 +110,7 @@ function three() {
 
 function four() {
     if (arr3[3] == int4) {
-        correct++;
+        correct=correct+4;
         count++;
         setNum();
     } else {
