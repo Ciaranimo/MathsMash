@@ -1,5 +1,5 @@
 //global variable
-var level = 0;
+//var level = 0;
 
 
 
@@ -58,6 +58,9 @@ function ajaxSubmit() {
 	// return false so the page does not actually change
 	return false;		
 };
+
+
+
 
 function setLevel(){
 
