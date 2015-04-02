@@ -24,7 +24,7 @@ a{
 }
 
 body {
-    background-image: url("bluelinen.png");
+    background-image: url("bg.png");
 }
 
 .page{
@@ -103,6 +103,7 @@ footer{ /*puts home button centre*/
   font-size: 40px;
   text-align: center;
   border: none;
+    background: none;
 }
 
 #qMark{
