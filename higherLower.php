@@ -16,6 +16,7 @@
 ?> 
 Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
 <a href="logout.php">Logout</a>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +51,7 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 		  Higher or Lower
 		</h1>
 		<div id="1" align="center">
-			Is:
+            Is:
 
 			<input type="text" value="" size="3" id="firstnum"> higher or lower than:
 

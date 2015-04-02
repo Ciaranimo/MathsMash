@@ -19,12 +19,14 @@
 }
 
 
+
 a{
 	text-decoration: none; /* removes underlining from all links */
 }
 
 body {
     background-image: url("bg.png");
+    
 }
 
 .page{
@@ -136,7 +138,8 @@ footer{ /*puts home button centre*/
     padding: 2%;
 	font-size: 40px;
 	font-weight: bold;
-  border: none;
+  border: solid #6B238E 1px;
+    background: none;
 }
 
 #secondnum{ /*second gotten number styling MUST BE 3 IDS FOR JS*/
@@ -146,7 +149,8 @@ footer{ /*puts home button centre*/
     padding: 2%;
 	font-size: 40px;
 	font-weight: bold;
-  border: none;
+  border: solid #6B238E 1px;
+    background: none;
 }
 
 #ans{ /*answer number styling MUST BE 3 IDS FOR JS*/
