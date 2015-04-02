@@ -26,7 +26,7 @@ function timerAlert() {
     alert("Time up!\n You got " + correct + " out of " + count);
 	totalUpdatedScore = correct;
 	updatedTotalScore();
-		setLevel();
+	setLevel();
 	ajaxSubmit();
     correct = 0;
     count = 0;
@@ -94,9 +94,6 @@ function setLevel(){
 	alert("level = " + level);
 
 };
-
-
-
 
 
 
