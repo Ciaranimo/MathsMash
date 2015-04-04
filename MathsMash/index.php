@@ -117,7 +117,7 @@
 			<p><input type="submit" value="Mash" id="mash" class="button"/> </p>
 			<!--<p><a id="mash" href ="mainmenu.html"><button class="button" type="button">mash</button></a></p>-->
             <!--<p id="remember"><input type="checkbox" name="remember" value="yes"  /> remember me?</p>-->
-            <br><a href="register.php" class="button"> &nbsp Register &nbsp</a></br>
+            <br><a href="register.php" class="button">Register</a></br>
             </form>
         </div>
 

@@ -1,3 +1,21 @@
+<?php 
+
+    // connect to DB
+    require("common.php"); 
+     
+    // Check whether user is logged in
+    if(empty($_SESSION['user'])) 
+    { 
+        // If they are not, redirect to the login page. 
+        header("Location: index.php"); 
+         
+        // this statement is needed 
+        die("Redirecting to index.php"); 
+    } 
+     
+?> 
+Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> Logged in<br /> 
+<a href="logout.php">Logout</a>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,27 +42,25 @@
 
 <body onload="hide()">
 	<div class="page">
-		<h1 align="center">
-		  Next In Sequence Game
-		</h1>
+		<header>
+            <img id ="lvlimg" src ="images/animals/lvl9.png" alt ="level image"/>
+            <p id="lvlnum">Level 9</p>
+        </header>
 		<div class="content">
             <div class="seqdisplay">
-                <div class="seqnums">
+                
                     
                     <input type="text" value="" id="fNum" /> 
-                </div>
-                <div class="seqnums">
+                
                     
                     <input type="text" value="" id="sNum" /> 
-                </div>
-                <div class="seqnums">
+               
                     
                     <input type="text" value="" id="tNum" /> 
-                </div>
-                <div class="seqnums">
+               
                     
                     <p id="qMark">?</p>
-                </div>
+                
            </div>
 			<div class="seqbuttons">
 			<button id="butBegin" onclick="begin()">
@@ -75,13 +91,14 @@
 			<input type="text" value="" size="3" id="currentScore"> out of
 
 			<input type="text" value="" size="3" id="totalPlays">
-			<br>
-			<br>
-			<br>
-			<a href="gamemenu.php">
+			
+			
+		</div>
+        <footer>
+            <a href="gamemenu.php">
 				<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
 			</a>
-		</div>
+        </footer>
 	</div>
 </body>
 

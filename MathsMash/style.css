@@ -18,17 +18,28 @@
     src: url(Fonts/Quicksand-Light.otf);
 }
 
+p{
+    font-size: 16px;
+    
+}
+
 header{
     width: auto;
-    height: 60px;
+    height: 80px;
     border-bottom: solid purple 1px;
-    
+    background-color: white;
 }
 
 #lvlimg{
     float:left;
     padding: 5px;
 }
+
+#lvlnum{
+    float: left;
+    padding-top: 12%;
+}
+
 
 a{
 	text-decoration: none; /* removes underlining from all links */
@@ -79,6 +90,7 @@ body {
 	font-size: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
+    padding: 2%;
 }
 
 footer{ /*puts home button centre*/
@@ -107,12 +119,11 @@ footer{ /*puts home button centre*/
 .seqnums{
     display: inline-block;
     width: 60px;
-    margin-top: 100px;
-    font-size: 40px;
+    padding-top: 100px;
 }
 
 #fNum, #sNum, #tNum, #answer{
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   border: none;
     background: none;
@@ -129,7 +140,7 @@ footer{ /*puts home button centre*/
 
 .seqdisplay{
     margin-bottom: 4%;   
-    
+    margin-top: 10%;
 }
 
 
@@ -420,5 +431,30 @@ a.buttonkev {
 	width: 100px;
 }
 
-
+<!----Home Button----->
+.round-button {
+    width: 10%;
+    height: 0;
+    padding-bottom: 10%;
+    border-radius: 50%;
+    border: 2px solid #f5f5f5;
+    overflow: hidden;
+    background: #464646;
+    box-shadow: 0 0 3px gray;
+}
+.round-button:hover {
+    background: #262626;
+}
+.round-button img {
+    display: block;
+    width: 76%;
+    padding: 12%;
+    height: auto;
+}
     
+<!----FOOTER----->
+
+footer{
+ margin-bottom: 10%;   
+    padding: 20px;
+}
