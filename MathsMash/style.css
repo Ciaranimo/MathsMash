@@ -37,7 +37,7 @@ header{
 
 #lvlnum{
     float: left;
-    padding-top: 12%;
+    padding-top: 30px;
 }
 
 
@@ -145,30 +145,40 @@ footer{ /*puts home button centre*/
 
 
 
-<!--CSS for Operators-->
+<!--Operators-->
 
 
 .opdisplay{ /*does nothing*/
-
+    width: auto;
+    height: 70px;
+    background-color: blue;
+    padding-top: 30px;      
  }
 
 #firstnum{ /*first gotten number styling MUST BE 3 IDS FOR JS*/
-    width: 20%;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    min-width: 30px;
+    min-height: 35px;
     display:inline-block;
     color: #6B238E;
     padding: 2%;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: bold;
-  border: solid #6B238E 1px;
+    border: solid #6B238E 1px;
     background: none;
+      
 }
 
 #secondnum{ /*second gotten number styling MUST BE 3 IDS FOR JS*/
-    width:20%;
-    display: inline-block;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    min-width: 30px;
+    min-height: 35px;
+    display:inline-block;
     color: #6B238E;
     padding: 2%;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: bold;
   border: solid #6B238E 1px;
     background: none;
@@ -177,37 +187,36 @@ footer{ /*puts home button centre*/
 #ans{ /*answer number styling MUST BE 3 IDS FOR JS*/
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    width:20%;
+    width: 90px;
+    min-height: 35px;
     display:inline-block;
     color: #6B238E;
-    padding: 2%;
-	font-family: 'fonty';
-	border: solid #6B238E 1px;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: bold;
+    border: solid #6B238E 1px;
+    background: none;
 }
 
 .guess{ /*box to represent user guess*/
 	-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border-radius: 5px;
     border: solid #6B238E 1px;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    font-size: 40px;
+    min-width: 30px;
+    min-height: 35px;
+    display:inline-block;
+    font-size: 30px;
 	
 }
 #equalsOP{ /*just for the equals sign*/
 	display: inline;
 	color: #6B238E;
 	font-weight: bold;
-    font-size: 40px
+    font-size: 30px
 }
 
 
 .op-buttons-top{ /*centres the top 2 buttons in operators*/
-    margin: 0 auto;
+    margin-top: 5%;
 }
 
 .op-buttons-btm{ /*centres the top 2 buttons*/

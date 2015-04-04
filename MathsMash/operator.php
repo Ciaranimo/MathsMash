@@ -63,11 +63,9 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 <body onload="hide(); updatedTotalScore();">
 	<div class="page">
 		<header>
-			<h1 align="center">
-			  Operators
-			</h1>
-		</header>
-		
+            <img id ="lvlimg" src ="images/animals/lvl9.png" alt ="level image"/>
+            <p id="lvlnum">Level 9</p>
+        </header>
 		<div class="content">
 		
 		    <div class="opdisplay">
@@ -75,9 +73,9 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 				<div class="guess">?</div> <!-- guess box-->
 				<div id="secondnum"> </div> 
 				<div id="equalsOP">=</div>
-				<input type="text" value="" id="ans" />
+				<input type="text" value="" id="ans" &nbsp/>
 			</div>
-			<br>
+		
 			
 			<div class="op-buttons-top">
 
@@ -114,13 +112,8 @@ Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'
 				<input type="text" value="" size="3" id="totalPlays">
 				<br>
 				<br>
-				<div>
-					Your total score: 
-					<input type="text" value="" size="3" id="finalScore">
-				</div>
-				<br>	
-				<br>
-			   
+				
+			
 			</div>
 		</div>	
 		
