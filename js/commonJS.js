@@ -23,7 +23,6 @@ function timerAlert() {
     $('#secondnum').val("");
     $('#currentScore').val("");
     $('#totalPlays').val("");
-    alert("Time up!\n You got " + correct + " out of " + count);
 	totalUpdatedScore = correct;
 	updatedTotalScore();
 	setLevel();
@@ -94,7 +93,6 @@ function setLevel(){
 	else if (myscore>=2560){
 		level=10;
 	}
-	alert("level = " + level);
 
 };
 
@@ -147,6 +145,7 @@ function hide() {
     $("#but3").hide();
     $("#but4").hide();
     $("#snap").hide();
+    $("#optest").hide();
 }
 
 function show() {
@@ -156,6 +155,8 @@ function show() {
     $("#but3").show();
     $("#but4").show();
     $("#snap").show();
+    $("#optest").show();
+    
 
 }
 

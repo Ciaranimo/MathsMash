@@ -79,7 +79,7 @@
 		<header>
             <div id="icon"></div>
             <p id="lvlnum">Level: <?php echo $row["level"];?></p>
-            <a id="logout" href="logout.php">Logout</a>
+            <a id="logout" href="logout.php"><img src="images/logout_icon.png" style="width:50px;height:50px;border:0"></a>
         </header>
 		<div class="content">
 			<div id="leftBox">
@@ -102,14 +102,12 @@
 				<h2>
 			  Current Score: 
 			</h2>
-				<input type="text" value="" size="3" id="currentScore"> out of
-
-				<input type="text" value="" size="3" id="totalPlays">
+				<input type="text" value="" size="3" id="currentScore"> 
 				<br>
 				<br>
 				<br>
 				<a href="gamemenu.php">
-					<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
+					<img src="images/home_button.png" style="width:50px;height:50px;border:0">
 				</a>
 			</div>
 		</div>

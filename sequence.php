@@ -12,6 +12,10 @@
         // this statement is needed 
         die("Redirecting to index.php"); 
     } 
+    else
+    {
+    	require("topMenu.php");
+    }  
      
 ?> 
 
@@ -24,6 +28,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">var actualUser = <?php echo json_encode(htmlentities($_SESSION['user']['username'])); ?>;</script>
+    <script type="text/javascript">var myscore = <?php echo $row["score"];?>;
+    var levelNew = <?php echo $row["level"];?>;</script>  
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
     </script>
@@ -34,18 +40,19 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="js/commonJS.js"></script>
     <script type="text/javascript" src="js/sequenceJS.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
 
     <title>
         Sequence
     </title>
 </head>
 
-<body onload="hide()">
+<body onload="hide(),setIcon()">
 	<div class="page">
 		<header>
-            <img id ="lvlimg" src ="images/animals/lvl9.png" alt ="level image"/>
-            <p id="lvlnum">Level 9</p>
-            <a id="logout" href="logout.php">Logout</a>
+            <div id="icon"></div>
+            <p id="lvlnum">Level: <?php echo $row["level"];?></p>
+            <a id="logout" href="logout.php"><img src="images/logout_icon.png" style="width:50px;height:50px;border:0"></a>
         </header>
 		<div class="content">
             <div class="seqdisplay">
@@ -89,9 +96,7 @@
 			<h2>
 			  Current Score: 
 			</h2>
-			<input type="text" value="" size="3" id="currentScore"> out of
-
-			<input type="text" value="" size="3" id="totalPlays">
+			<input type="text" value="" size="3" id="currentScore"> 
 			
 			
 		</div>
@@ -99,7 +104,7 @@
             <br>
             
             <a href="gamemenu.php">
-				<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
+				<img src="images/home_button.png" style="width:50px;height:50px;border:0">
 			</a>
         </footer>
 	</div>

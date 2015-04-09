@@ -12,6 +12,10 @@
         // this statement is needed 
         die("Redirecting to index.php"); 
     } 
+    else
+    {
+    	require("topMenu.php");
+    }  
      
 ?> 
 
@@ -31,40 +35,20 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="js/operatorJS.js"></script>
     <script type="text/javascript" src="js/commonJS.js"></script>
-	<script type="text/javascript">
-		var addRippleEffect = function (e) {
-		var target = e.target;
-		if (target.tagName.toLowerCase() !== 'button') return false;
-		var rect = target.getBoundingClientRect();
-		var ripple = target.querySelector('.ripple');
-		if (!ripple) {
-			ripple = document.createElement('span');
-			ripple.className = 'ripple';
-			ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px';
-			target.appendChild(ripple);
-		}
-		ripple.classList.remove('show');
-		var top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
-		var left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
-		ripple.style.top = top + 'px';
-		ripple.style.left = left + 'px';
-		ripple.classList.add('show');
-		return false;
-		}
-
-		document.addEventListener('click', addRippleEffect, false);
-	</script>
+    <script type="text/javascript" src="js/profile.js"></script>
+	<script type="text/javascript">var myscore = <?php echo $row["score"];?>;
+    var levelNew = <?php echo $row["level"];?>;</script>  
     <title>
         Operator
     </title>
 </head>
 
-<body onload="hide(); updatedTotalScore();">
+<body onload="hide(),setIcon(),updatedTotalScore()">
 	<div class="page">
 		<header>
-            <img id ="lvlimg" src ="images/animals/lvl9.png" alt ="level image"/>
-            <p id="lvlnum">Level 9</p>
-             <a id="logout" href="logout.php">Logout</a>
+            <div id="icon"></div>
+            <p id="lvlnum">Level: <?php echo $row["level"];?></p>
+            <a id="logout" href="logout.php"><img src="images/logout_icon.png" style="width:50px;height:50px;border:0"></a>
         </header>
 		<div class="content">
 		
@@ -77,6 +61,7 @@
 			</div>
 		
 			
+			<div id="optest">
 			<div class="op-buttons-top">
 
 				<button class="opbtn" onclick="add()">
@@ -95,6 +80,7 @@
 					÷
 				</button>
 			</div>
+			</div>
 		  
 			<div id="time"> 
 			</div>
@@ -107,9 +93,7 @@
 			
 			<div id="liveScoreUpdate" align="center">
 				<h2>Current Score: </h2>
-				<input type="text" value="" size="3" id="currentScore"> out of
-
-				<input type="text" value="" size="3" id="totalPlays">
+				<input type="text" value="" size="3" id="currentScore"> 
 				<br>
 				<br>
 				
@@ -120,7 +104,7 @@
 
 		<footer>
 			 <a href="gamemenu.php">
-					<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
+					<img src="images/home_button.png" style="width:50px;height:50px;border:0">
 				 </a>
 		
 		</footer>

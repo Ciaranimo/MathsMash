@@ -46,29 +46,29 @@
 
 <body onload="setIcon()">
 <header>
-             <a id="logout" href="logout.php">Logout</a>
+            <div id="icon"></div>
+            <a id="logout" href="logout.php"><img src="images/logout_icon.png" style="width:50px;height:50px;border:0"></a>
         </header>
-	<div align="center">
-		<!--set icon based on level-->
-		<div id="icon"> 
-			<!--icon is set here-->
-		</div>
+			<div align="center">
+		
 		<br>
+
 		<!--set name based on session-->
 		<div id="profileName">
-			Name: <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> 
+			<?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> 
 		</div>
-		<br>
 		<!--set level based on database-->
 		<div id="profileLevel">
 			Level: <?php echo $row["level"];?>
+			</br>
+			Score: <?php echo $row["score"];?>
 		</div>
 	</div>	
 	</br>
 	</br>
 	<div align="center">
 	<a href="mainmenu.php">
-          <img src="images/HomeButton.jpg" alt="HIGHER OR LOWER" style="width:50px;height:50px;border:0">
+          <img src="images/home_button.png" style="width:50px;height:50px;border:0">
         </a>
         </div>
 </body>

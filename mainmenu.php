@@ -24,26 +24,33 @@ Your Score: <?php echo $row["score"];?><br/>
 Level: <?php echo $row["level"];?><br/>
 Points until next level: <br/>
 __________________<br/>-->
-<header>
-<a href="logout.php"><b>Logout</a>--><br>
-<a href="edit_account.php">Edit your account</b></a>-->
-</header>
 
-</div>
+
 <!DOCTYPE html>
 <html>
     <head>
-     <link rel="stylesheet" type="text/css" href="style.css"/> 
-     <script type="text/javascript">var myScore = <?php echo $row["score"];?>;</script>  
+     <script type="text/javascript">var myscore = <?php echo $row["score"];?>;
+    var levelNew = <?php echo $row["level"];?>;</script>  
+     <script type="text/javascript" src="js/profile.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/> 
     </head>
-    <body>
+    <body onload="setIcon()">
+    <div class="page">
+    <header>
+            <div id="icon"></div>
+            <p id="lvlnum">Level: <?php echo $row["level"];?></p>
+            <a id="logout" href="logout.php">
+            <img src="images/logout_icon.png" style="width:50px;height:50px;border:0">
+            </a>
+        </header>
+    <div class= "content">
     
     <a href="gamemenu.php" class="buttonkev"> Game Menu</a>
     <a href="leaderboard.php" class="buttonkev"> Leaderboard</a>  
     <a href="profile.php" class="buttonkev"> Profile</a>
+    </div>
     
-    
-    
+    </div>
     </body>
 
 

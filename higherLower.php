@@ -12,6 +12,10 @@
         // this statement is needed 
         die("Redirecting to index.php"); 
     } 
+    else
+    {
+    	require("topMenu.php");
+    }  
      
 ?> 
 
@@ -24,6 +28,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script type="text/javascript">var actualUser = <?php echo json_encode(htmlentities($_SESSION['user']['username'])); ?>;</script>
+    <script type="text/javascript">var myscore = <?php echo $row["score"];?>;
+    var levelNew = <?php echo $row["level"];?>;</script>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="jquery-2.1.1.min.js" type="text/javascript"></script>
@@ -31,6 +37,7 @@
     <script type="text/javascript" src="js/higherLowerJS.js"></script>
     <!--<script> alert("username = " + actualUser);</script>-->
     <script type="text/javascript" src="js/commonJS.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
 
     <title>
         Higher or Lower
@@ -44,12 +51,12 @@
     </style>
 </head>
 
-<body onload="hide()">
+<body onload="hide(),setIcon()">
 	<div class="page">
 	<header>
-            <img id ="lvlimg" src ="images/animals/lvl9.png" alt ="level image"/>
-            <p id="lvlnum">Level 9</p>
-             <a id="logout" href="logout.php">Logout</a>
+            <div id="icon"></div>
+            <p id="lvlnum">Level: <?php echo $row["level"];?></p>
+            <a id="logout" href="logout.php"><img src="images/logout_icon.png" style="width:50px;height:50px;border:0"></a>
         </header>
 		<h1 align="center">
 		  Higher or Lower
@@ -81,14 +88,12 @@
 				<h2>
 			  Current Score: 
 			</h2>
-				<input type="text" value="" size="3" id="currentScore"> out of
-
-				<input type="text" value="" size="3" id="totalPlays">
+				<input type="text" value="" size="3" id="currentScore"> 
 				<br>
 				<br>
 				<br>
 				<a href="gamemenu.php">
-					<img src="images/HomeButton.jpg" alt="Home" style="width:50px;height:50px;border:0">
+					<img src="images/home_button.png" style="width:50px;height:50px;border:0">
 				</a>
 			</div>
 		</div>

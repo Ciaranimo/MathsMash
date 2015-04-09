@@ -39,7 +39,8 @@
         { 
             die("Failed to run query: " . $ex->getMessage()); 
         } 
-        
+    
+   
         
 	} 
 ?> 
@@ -50,10 +51,20 @@
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="js/profile.js"></script>
+    <script type="text/javascript">var myscore = <?php echo $row["score"];?>;
+    var levelNew = <?php echo $row["level"];?>;</script>  
     <title>Leaderboard</title>
 
 </head>
-<body>
+<body onload="setIcon()">
+<div class="page">
+		<header>
+            <div id="icon"></div>
+            <p id="lvlnum">Level: <?php echo $row["level"];?></p>
+            <a id="logout" href="logout.php"><img src="images/logout_icon.png" style="width:50px;height:50px;border:0"></a>
+        </header>
+        <div class="content">
 
 <div class="ldrbrd" align="center">
 		<br>
@@ -82,8 +93,10 @@
 </div><br>
 <div align="center">
 <a href="mainmenu.php">
-          <img src="images/HomeButton.jpg" alt="HIGHER OR LOWER" style="width:50px;height:50px;border:0">
+         <img src="images/home_button.png" style="width:50px;height:50px;border:0">
         </a>
+</div>
+</div>
 </div>
 </body>
 </html>
