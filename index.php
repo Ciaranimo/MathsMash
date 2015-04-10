@@ -1,3 +1,4 @@
+
 <?php
     // Get DB link
     require("common.php"); 
@@ -92,7 +93,6 @@
     } 
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head lang="en">

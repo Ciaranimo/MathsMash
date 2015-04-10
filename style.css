@@ -85,18 +85,23 @@ body {
     border-radius:6px;
     color: #fff;
     text-decoration: none;
-    cursor: pointer;
     border:none;
 	font-family: 'fonty';
 	font-size: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding: 2%;
+    padding: 5px;
 }
 
-footer{ /*puts home button centre*/
-    margin: 0 auto;
+ <!----FOOTER----->
+
+.footer{ /*puts home button centre*/
+    margin-top: 10px;   
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
    
+
 }
 
 <!--main menu code-->
@@ -260,6 +265,11 @@ footer{ /*puts home button centre*/
 	font-family: 'fonty';
     margin-bottom: 10px;       
 }
+
+
+<!----Edit Account ---->
+
+
 
 
 button { /*applies ripple on every button*/
@@ -463,12 +473,7 @@ a.buttonkev {
     height: auto;
 }
     
-<!----FOOTER----->
 
-footer{
- margin-bottom: 10%;   
-    padding: 20px;
-}
 
 #logout{
   float:right;

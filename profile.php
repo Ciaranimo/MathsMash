@@ -64,8 +64,7 @@
 			Score: <?php echo $row["score"];?>
 		</div>
 	</div>	
-	</br>
-	</br>
+	
 	<div align="center">
 	<a href="mainmenu.php">
           <img src="images/home_button.png" style="width:50px;height:50px;border:0">

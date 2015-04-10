@@ -149,18 +149,42 @@
     } 
      
 ?> 
-<h1>Register</h1> 
-<form action="register.php" method="post"> 
-    Username:<br /> 
-    <input type="text" name="username" value="" /> 
-    <br /><br /> 
-    E-Mail:<br /> 
-    <input type="text" name="email" value="" /> 
-    <br /><br /> 
-    Password:<br /> 
-    <input type="password" name="password" value="" /> 
-    <br /><br /> 
-    <input type="submit" value="Register" /> 
-</form>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        
+        <title>Register Account</title>
+    </head>
+    
+    <body onload="setIcon()">
+        <div class="page">
+            <div class="content">
+                <h1>Register</h1> 
+                <form action="register.php" method="post"> 
+                    <p>Username:</p>
+                    <input type="text" name="username" value="" /> 
+                    <p>E-Mail:</p> 
+                    <input type="text" name="email" value="" /> 
+                    
+                    <p>Password:</p>
+                    <input type="password" name="password" value="" /> 
+                    <br /> 
+                    <input type="submit" class="button" value="Register" /> 
+                </form>
+            </div>
+            <footer>
+                    
+        
+                <a href="mainmenu.php">
+                  <img src="images/home_button.png" style="width:50px;height:50px;border:0">
+                    </a>
+        
+            </footer>
+        </div>
     </body>
 </html>
