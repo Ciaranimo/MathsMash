@@ -34,14 +34,13 @@
             // run query
             	$stmt = $db->prepare($query); 
             	$result = $stmt->execute($query_params); 
+            	$row = $stmt->fetch(); 
         } 
         catch(PDOException $ex) 
         { 
             die("Failed to run query: " . $ex->getMessage()); 
         } 
-    
-   
-        
+            
 	} 
 ?> 
 

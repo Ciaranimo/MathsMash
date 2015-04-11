@@ -62,6 +62,8 @@
 			Level: <?php echo $row["level"];?>
 			</br>
 			Score: <?php echo $row["score"];?>
+			</br>
+			<a href="edit_account.php" id="eaccount">Edit Account</a>
 		</div>
 	</div>	
 	

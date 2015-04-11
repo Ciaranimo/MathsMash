@@ -355,7 +355,8 @@ font-size: 25px;
 	
 }
 .ldrbrd tr:nth-child(odd){ background-color:#541a8a; color: white;}
-.ldrbrd tr:nth-child(even)    { background-color:#00ffff; }.ldrbrd td{
+.ldrbrd tr:nth-child(even)    { background-color:#00ffff; color: #111314;}
+.ldrbrd td{
 	vertical-align:middle;
 	
 	
@@ -365,7 +366,7 @@ font-size: 25px;
 	font-size:16px;
 	font-family:'fonty';
 	font-weight:bold;
-	color:#111314;
+	
 }.ldrbrd tr:last-child td{
 	border-width:0px 1px 0px 0px;
 }.ldrbrd tr td:last-child{
