@@ -50,6 +50,7 @@
 
           } else {
 			  count++;
+			  correct--;
           }
       }
 
