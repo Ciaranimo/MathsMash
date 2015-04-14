@@ -1,4 +1,3 @@
-
 /*top menu*/
 #topMenu{
   font-family: 'fonty';
@@ -480,4 +479,8 @@ a.buttonkev {
   float:right;
 padding-top: 20px;
 padding-right: 5px;
+}
+
+.How{
+ font-family: fonty;   
 }

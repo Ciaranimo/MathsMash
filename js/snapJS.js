@@ -49,6 +49,7 @@
 			  count++;
 
           } else {
+          	correct--;
 			  count++;
 			  correct--;
           }
