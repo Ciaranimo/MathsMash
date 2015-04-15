@@ -6,7 +6,7 @@
           generateNums();
           hideBegin();
           setNum();
-          countdownTimer(10000);
+          countdownTimer(30000);
           myTime = setInterval(setBackgroundTimer, 550);
       }
 

@@ -5,7 +5,7 @@ var randomNum, randomNum2, count = 0,
 function begin() {
     setNum();
     show();
-    countdownTimer(5000);
+    countdownTimer(30000);
     hideBegin();
 }
 
