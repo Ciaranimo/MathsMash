@@ -1,4 +1,3 @@
-
 <?php
     // Get DB link
     require("common.php"); 
@@ -97,34 +96,34 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta content='width=device-width, initial-scale=1' name='viewport'/>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
     <title>Maths Mash</title>
 </head>
+
 <body>
     <div class="page">
+        <br>
 
-
-		<br/>
-            <h1><img id="logoimg" src="images/logo.png" alt="logo"/></h1>
+        <h1><img alt="logo" id="logoimg" src="images/logo.png"></h1>
 
         <div id="content">
-        <form action="index.php" method="post">
-            <h4>Login</h4>
-            <input type="text" name="username" value="<?php echo $submitted_username; ?>"/>
-            <h4>Password</h4>
-            <input type="password" name="password">			
-			<p><input type="submit" value="Mash" id="mash" class="button"/> </p>
-			<!--<p><a id="mash" href ="mainmenu.html"><button class="button" type="button">mash</button></a></p>-->
-            <!--<p id="remember"><input type="checkbox" name="remember" value="yes"  /> remember me?</p>-->
-            <br><a href="register.php" class="button">Register</a></br>
+            <form action="index.php" method="post">
+                <h4>Login</h4><input name="username" type="text" value=
+                "<?php echo $submitted_username; ?>">
+
+                <h4>Password</h4><input name="password" type="password">
+
+                <p><input class="button" id="mash" type="submit" value=
+                "Mash"></p><!--<p><a id="mash" href ="mainmenu.html"><button class="button" type="button">mash</button></a></p>-->
+                <!--<p id="remember"><input type="checkbox" name="remember" value="yes"  /> remember me?</p>-->
+                <br>
+                <a class="button" href="register.php">Register</a><br>
             </form>
         </div>
 
-        <footer>
-            
-        </footer>
-
+        <footer></footer>
     </div>
 </body>
 </html>

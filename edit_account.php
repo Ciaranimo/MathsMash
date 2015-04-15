@@ -1,4 +1,3 @@
-
 <?php 
 
     // Get common DB connection
@@ -135,53 +134,49 @@
         die("Redirecting to mainmenu.php"); 
     } 
      
-?> 
-
+?>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">    
-    
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        
-        <title>Edit Account</title>
-    </head>
-    
-    <body onload="setIcon()">
 
-        <div class="page">
-           <header>
-            <div id="icon"></div>
-            <a id="logout" href="logout.php"><img src="images/logout_icon.png" style="width:50px;height:50px;border:0"></a>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <title>Edit Account</title>
+</head>
+
+<body onload="setIcon()">
+    <div class="page">
+        <header>
+            <div id="icon"></div><a href="logout.php" id="logout"><img src=
+            "images/logout_icon.png" style=
+            "width:50px;height:50px;border:0"></a>
         </header>
-            <div class="content">
-    
-                <form action="edit_account.php" method="post"> 
-                    <div id="profileName">
-			<?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?> 
-		</div> 
-                    
-                    <p>E-Mail Address: </p>
-                    <input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" /> 
-                    
-                    <p>Password:</p>
-                    <input type="password" name="password" value="" /><br /> 
-                    <p><i>(leave blank if you do not want to change your password)</i></p> 
-                   
-                   <!-- <input type="submit" value="Update Account" /> -->
-                    
-                    <input type="submit" class="button" value="Update" /> 
-                </form>
-                
-            </div>
-            <footer>
-                    
-        
-                <a href="mainmenu.php">
-                  <img src="images/home_button.png" style="width:50px;height:50px;border:0">
-                    </a>
-        
-            </footer>
+
+        <div class="content">
+            <form action="edit_account.php" method="post">
+                <div id="profileName">
+                    <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?>
+                </div>
+
+                <p>E-Mail Address:</p><input name="email" type="text" value=
+                " &lt;?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?&gt;">
+
+                <p>Password:</p><input name="password" type="password" value=
+                ""><br>
+
+                <p style="font-style: italic">(leave blank if you do not want
+                to change your password)</p>
+                <!-- <input type="submit" value="Update Account" /> -->
+                <input class="button" type="submit" value="Update">
+            </form>
         </div>
-    </body>
+
+        <footer>
+            <a href="mainmenu.php"><img src="images/home_button.png" style=
+            "width:50px;height:50px;border:0"></a>
+        </footer>
+    </div>
+</body>
+</html>

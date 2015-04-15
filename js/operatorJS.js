@@ -1,7 +1,7 @@
-      //numbers
+       //numbers
       var num1, num2, ans, count = 0,
           correct = 0,
-           timer;
+          timer;
 
       function begin() {
           setNum();
@@ -12,13 +12,14 @@
 
       function setNum() {
           //set numbers
-          num1 = document.getElementById("firstnum").innerHTML=(Math.floor(Math.random() * 100));
-num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() * 100));
+          num1 = document.getElementById("firstnum").innerHTML = (Math.floor(
+              Math.random() * 100));
+          num2 = document.getElementById("secondnum").innerHTML = (Math.floor(
+              Math.random() * 100));
           $('#firstnum').val(num1);
           $('#secondnum').val(num2);
           $('#currentScore').val(correct);
           $('#totalPlays').val(count);
-
           //calculate
           var mul = num1 * num2;
           var add = num1 + num2;
@@ -33,13 +34,12 @@ num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() 
           }
           ans = arr[parseInt(Math.random() * arr.length)];
           $('#ans').val(ans);
-
       }
 
       function mul() {
           if (num1 * num2 == ans) {
               count++;
-              correct=correct+3;
+              correct = correct + 3;
               setNum();
           } else {
               count++;
@@ -50,7 +50,7 @@ num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() 
       function add() {
           if (num1 + num2 == ans) {
               count++;
-              correct=correct+3;
+              correct = correct + 3;
               setNum();
           } else {
               count++;
@@ -61,7 +61,7 @@ num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() 
       function sub() {
           if (num1 - num2 == ans) {
               count++;
-              correct=correct+3;
+              correct = correct + 3;
               setNum();
           } else {
               count++;
@@ -72,7 +72,7 @@ num2 = document.getElementById("secondnum").innerHTML=(Math.floor(Math.random() 
       function div() {
           if (num1 / num2 == ans) {
               count++;
-              correct=correct+3;
+              correct = correct + 3;
               setNum();
           } else {
               count++;

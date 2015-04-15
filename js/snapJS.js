@@ -1,4 +1,5 @@
-      var ran1, ran2, count = 0, correct = 0,
+      var ran1, ran2, count = 0,
+          correct = 0,
           myTime, timer;
 
       function begin() {
@@ -7,7 +8,6 @@
           setNum();
           countdownTimer(10000);
           myTime = setInterval(setBackgroundTimer, 550);
-
       }
 
       function setBackgroundTimer() {
@@ -16,55 +16,41 @@
           randRight();
       }
 
-
-
-
       function setNum() {
-
           show();
           hideBegin();
           randLeft();
           randRight();
           $('#currentScore').val(correct);
           $('#totalPlays').val(count);
-
       }
 
       function randLeft() {
-
           document.getElementById("leftBox").innerHTML = ran1;
       }
 
       function randRight() {
-
           document.getElementById("rightBox").innerHTML = ran2;
       }
 
-
       function checkNums() {
-
           if (ran1 == ran2) {
-
               correct++;
-			  count++;
-
+              count++;
           } else {
-          	correct--;
-			  count++;
-			  correct--;
+              correct--;
+              count++;
+              correct--;
           }
       }
 
       function snapFunction() {
-
           checkNums();
           generateNums();
           setNum();
-
       }
 
       function generateNums() {
-
           ran1 = parseInt(((Math.random() * 10) + 1));
           ran2 = parseInt(((Math.random() * 10) + 1));
       }

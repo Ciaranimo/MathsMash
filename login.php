@@ -92,17 +92,25 @@
         } 
     } 
      
-?> 
-<h1>Login</h1> 
-<form action="login.php" method="post"> 
-    Username:<br /> 
-    <input type="text" name="username" value="<?php echo $submitted_username; ?>" />
-    <br /><br /> 
-    Password:<br /> 
-    <input type="password" name="password" value="" /> 
-    <br /><br /> 
-    <input type="submit" value="Login" /> 
-</form> 
-<a href="register.php">Register</a>
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
 
+<body>
+    <h1>Login</h1>
 
+    <form action="login.php" method="post">
+        Username:<br>
+        <input name="username" type="text" value=
+        "<?php echo $submitted_username; ?>"><br>
+        <br>
+        Password:<br>
+        <input name="password" type="password" value=""><br>
+        <br>
+        <input type="submit" value="Login">
+    </form><a href="register.php">Register</a>
+</body>
+</html>
