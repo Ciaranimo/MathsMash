@@ -54,6 +54,7 @@
 var myscore = <?php echo $row["score"];?>;
     var levelNew = <?php echo $row["level"];?>;
     </script>
+	<script src="js/commonJS.js" type="text/javascript"></script>
 
     <title>Leaderboard</title>
 </head>
@@ -97,7 +98,9 @@ var myscore = <?php echo $row["score"];?>;
 
             <div style="text-align: center">
                 <a href="mainmenu.php"><img src="images/home_button.png" style=
-                "width:50px;height:50px;border:0"></a>
+                "width:50px;height:50px;border:0"></a><br><br>
+				<img onclick="back()" src="images/backButton.png" style= 
+			"width:50px;height:50px;border:0"></img>
             </div>
         </div>
     </div>

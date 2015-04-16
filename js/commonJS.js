@@ -127,3 +127,7 @@ function hideBegin() {
 function showBegin() {
     $("#butBegin").show();
 }
+
+function back() {
+    window.history.back();
+}

@@ -67,7 +67,9 @@ var actualUser = <?php echo json_encode(htmlentities($_SESSION['user']['username
 
     <div style="text-align: center">
         <a href="mainmenu.php"><img src="images/home_button.png" style=
-        "width:50px;height:50px;border:0"></a>
+        "width:50px;height:50px;border:0"></a><br><br>
+		<img onclick="back()" src="images/backButton.png" style= 
+			"width:50px;height:50px;border:0"></img>
     </div>
 </body>
 </html>

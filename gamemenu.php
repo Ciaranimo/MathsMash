@@ -74,7 +74,9 @@ var myscore =
                 "gameicons" src="images/HigherLower.png"></a>
             </div><br>
             <a href="mainmenu.php"><img src="images/home_button.png" style=
-            "width:50px;height:50px;border:0"></a><br>
+            "width:50px;height:50px;border:0"></a><br><br>
+			<img onclick="back()" src="images/backButton.png" style= 
+			"width:50px;height:50px;border:0"></img>
         </div>
     </div>
 </body>
