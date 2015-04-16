@@ -140,11 +140,18 @@ body {
     padding-top:100px
 }
 
+.seqdisplay{
+    display: block;
+    margin: auto 0;
+   
+    
+}
 #fNum,#sNum,#tNum,#answer {
     font-size:30px;
     text-align:center;
     border:none;
     background:none
+    
 }
 
 #qMark {
@@ -157,6 +164,7 @@ body {
 }
 
 .seqdisplay {
+    
     margin-bottom:4%;
     margin-top:10%
 }
@@ -165,9 +173,10 @@ body {
 .opdisplay {
 /*does nothing*/
     width:auto;
-    height:70px;
+    
+    height: 100px;
     background-color:blue;
-    padding-top:30px
+    margin-top:30px
 }
 
 #firstnum {
@@ -181,7 +190,6 @@ body {
     padding:2%;
     font-size:30px;
     font-weight:700;
-    border:solid #6B238E 1px;
     background:none
 }
 
@@ -196,7 +204,6 @@ body {
     padding:2%;
     font-size:30px;
     font-weight:700;
-    border:solid #6B238E 1px;
     background:none
 }
 
@@ -210,19 +217,20 @@ body {
     color:#6B238E;
     font-size:30px;
     font-weight:700;
-    border:solid #6B238E 1px;
     background:none
 }
 
-.guess {
-/*box to represent user guess*/
-    -moz-border-radius:5px;
+#guess {
+/*box to represent user guess*/      
+     -moz-border-radius:5px;
     -webkit-border-radius:5px;
-    border:solid #6B238E 1px;
     min-width:30px;
     min-height:35px;
     display:inline-block;
-    font-size:30px
+    color:#6B238E;
+    font-size:30px;
+    font-weight:700;
+    background:none
 }
 
 #equalsOP {
