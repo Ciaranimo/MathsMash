@@ -30,7 +30,7 @@ function setIcon() {
         document.getElementById("icon").innerHTML =
             "<img id='iconSize' src='images/animals/lvl10.png'/>";
     }
-}
+};
 
 function setIconLarge() {
     if (levelNew == 1) {
@@ -66,4 +66,4 @@ function setIconLarge() {
     }
     document.getElementById('iconSize').height = "150";
     document.getElementById('iconSize').width = "150";
-}
+};

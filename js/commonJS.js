@@ -1,7 +1,7 @@
 //global variable
 //var level = 0;
 function countdownTimer(number) {
-    if (number === 0) {
+    if (number == 0) {
         timerAlert();
     } else {
         $("#time").html("<h1>" + number / 1000 + "</h1>");
@@ -46,7 +46,7 @@ function ajaxSubmit() {
     });
     // return false so the page does not actually change
     return false;
-}
+};
 
 function setLevel() {
     if (myscore < 10) {
@@ -70,7 +70,7 @@ function setLevel() {
     } else if (myscore >= 2560) {
         level = 10;
     }
-}
+};
 
 function ajaxGet() {
     // Store data to be submitted into variables
@@ -91,7 +91,7 @@ function ajaxGet() {
     });
     // return false so the page does not actually change
     return false;
-}
+};
 
 function updatedTotalScore() {
     $('#finalScore').val(totalUpdatedScore);

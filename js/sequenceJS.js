@@ -8,7 +8,7 @@ function begin() {
     show();
     hideBegin();
     setNum();
-    countdownTimer(30000);
+    countdownTimer(5000);
 }
 
 function setNum() {

@@ -6,7 +6,7 @@
       function begin() {
           setNum();
           show();
-          countdownTimer(30000);
+          countdownTimer(10000);
           hideBegin();
       }
 
@@ -27,7 +27,7 @@
           var div = num1 / num2;
           //array
           var arr;
-          if (div === 0) {
+          if (div == 0) {
               arr = [mul, add, sub];
           } else {
               arr = [mul, add, sub, div];
