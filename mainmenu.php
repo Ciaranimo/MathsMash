@@ -53,10 +53,6 @@ var myscore = <?php echo $row["score"];?>;
             "buttonkev" href="profile.php">Profile</a> <a class=
 			"buttonkev" href="HowTo.php">How To</a>
         </div>
-		<br>
-			<img onclick="back()" src="images/backButton.png" style= 
-			"width:50px;height:50px;border:0"></img>
-		<br>
     </div>
 </body>
 </html>

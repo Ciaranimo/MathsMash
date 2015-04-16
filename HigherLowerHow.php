@@ -50,10 +50,10 @@ var myscore = <?php echo $row["score"];?>;
         </header>
 
         <div class="content">
-            <h1>Rules: Higher or Lower</h1><img src="images/HigherLowerHow.png" style=
-            "width:400px;height:600px"><br>
+			<h1>Higher or Lower</h1><img src="images/HigherLowerHow.png" style=
+            "width:300px;height:400px"><br>
             <a href="mainmenu.php"><img src="images/home_button.png" style=
-            "width:50px;height:50px;border:0"></a><br><br>
+            "width:50px;height:50px;border:0"></a>
 			<img onclick="back()" src="images/backButton.png" style= 
 			"width:50px;height:50px;border:0"></img>
         </div>

@@ -39,6 +39,7 @@ var myscore =
                         <?php echo $row["level"];?>;
     </script>
     <script src="js/profile.js" type="text/javascript"></script>
+	<script src="js/commonJS.js" type="text/javascript"></script>
 
     <title>Maths Mash</title>
 </head>
@@ -54,27 +55,20 @@ var myscore =
         </header>
 
         <div class="content">
-            <div>
+            <div id="topGames">
                 <a href="snap.php"><img alt="SNAP" class="gameicons" src=
-                "images/Snap.png"></a>
-            </div>
-
-            <div>
-                <a href="sequence.php"><img alt="SEQUENCE" class="gameicons"
+                "images/Snap.png"></a> &nbsp;
+				<a href="sequence.php"><img alt="SEQUENCE" class="gameicons"
                 src="images/Sequence.png"></a>
             </div>
-
-            <div>
+            <div id="bottomGames">
                 <a href="operator.php"><img alt="OPERATOR" class="gameicons"
-                src="images/Operators.png"></a>
-            </div>
-
-            <div>
-                <a href="higherLower.php"><img alt="HIGHER OR LOWER" class=
+                src="images/Operators.png"></a> &nbsp;
+				<a href="higherLower.php"><img alt="HIGHER OR LOWER" class=
                 "gameicons" src="images/HigherLower.png"></a>
             </div><br>
             <a href="mainmenu.php"><img src="images/home_button.png" style=
-            "width:50px;height:50px;border:0"></a><br><br>
+            "width:50px;height:50px;border:0"></a>
 			<img onclick="back()" src="images/backButton.png" style= 
 			"width:50px;height:50px;border:0"></img>
         </div>

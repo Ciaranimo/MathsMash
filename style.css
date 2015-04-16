@@ -43,7 +43,8 @@ a {
 }
 
 body {
-    background-image:url(bg.png)
+    background-image:url(bg.png);
+	margin: 0;
 }
 
 .page {
@@ -417,14 +418,22 @@ th {
     border-width:0 0 1px 1px
 }
 
+#topGames{
+	margin-top: 40px;
+}
+
+#bottomGames{
+	margin-bottom: 40px;
+}
+
 .buttonkev {
 /*Basic Button ldrbrds*/
     display:block;
-    height:100px;
-    width:300px;
+    height:80px;
+    width:280px;
     background:purple;
     border:2px solid rgba(33,68,72,0.59);
-    margin:40px auto;
+    margin:35px auto;
 /*Text ldrbrds*/
     color:#fff;
     text-align:center;
@@ -452,12 +461,12 @@ a.buttonkev {
 }
 
 #profileName {
-    font-size:75px;
+    font-size:40px;
     font-family:fonty
 }
 
 #profileLevel {
-    font-size:75px;
+    font-size:40px;
     font-family:fonty
 }
 
