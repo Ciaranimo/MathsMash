@@ -75,8 +75,7 @@ var myscore = <?php echo $row["score"];?>;
 
                 <h1>Leaderboard</h1><br>
                 <br>
-                <?php
-                            $row = $stmt->fetch(); 
+                <?php 
                             if($row)
                             {
                                 echo "<table><tr><th>Pos.</th><th>Name</th><th>Score</th><th>Level</th></tr>";
