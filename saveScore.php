@@ -1,4 +1,11 @@
 <?php
+/*
+* savescore.php *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @reference (PHP) Dr. Arghir-Nicolae Moldovan *
+*/  
 // PHP code used by the application to save the data
 // Author: Dr. Arghir-Nicolae Moldovan
 

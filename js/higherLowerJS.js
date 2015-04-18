@@ -1,3 +1,11 @@
+/*
+* higherlower.js *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
+
 var randomNum, randomNum2, count = 0,
     correct = 0,
     timer, totalUpdatedScore = 0;

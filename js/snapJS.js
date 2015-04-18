@@ -1,3 +1,11 @@
+/*
+* snap.js *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/     
+    
       var ran1, ran2, count = 0,
           correct = 0,
           myTime, timer;

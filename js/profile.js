@@ -1,3 +1,11 @@
+/*
+* profile.js *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
+
 function setIcon() {
     if (levelNew == 1) {
         document.getElementById("icon").innerHTML =

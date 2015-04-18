@@ -1,4 +1,11 @@
 <?php
+/*
+* profile.php *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
 
     // connect to DB
     require("common.php"); 

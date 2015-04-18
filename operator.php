@@ -1,4 +1,11 @@
 <?php 
+/*
+* operator.php *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
 
     // connect to DB
     require("common.php"); 
@@ -47,7 +54,7 @@ var myscore = <?php echo $row["score"];?>;
         <header>
             <div id="icon"></div>
 
-            <p id="lvlnum">Level: <?php echo $row["level"];?></p><a href=
+            <p id="lvlnum" style="padding-top:11px; !important">Level: <?php echo $row["level"];?></p><a href=
             "logout.php" id="logout"><img src="images/logout_icon.png" style=
             "width:50px;height:50px;border:0"></a>
         </header>

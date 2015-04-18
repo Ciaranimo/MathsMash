@@ -1,5 +1,12 @@
 <?php 
-
+/*
+* edit_account.php *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @reference (PHP) http://forums.devshed.com/php-faqs-stickies-167/program-basic-secure-login-system-using-php-mysql-891201.html *
+* @author (HTML) Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
     // Get common DB connection
     require("common.php"); 
      

@@ -1,4 +1,11 @@
 <?php 
+/*
+* snap.php *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
 
     // execute common code 
     require("common.php"); 

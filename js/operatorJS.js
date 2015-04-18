@@ -1,3 +1,11 @@
+/*
+* operator.js *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
+
        //numbers
       var num1, num2, ans, count = 0,
           correct = 0,

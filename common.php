@@ -1,4 +1,11 @@
 <?php
+/*
+* common.php *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @reference http://forums.devshed.com/php-faqs-stickies-167/program-basic-secure-login-system-using-php-mysql-891201.html *
+*/ 
 //common.php accesses the mySQL database
 //variables
 //$username = "1819848_ms";

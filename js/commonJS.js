@@ -1,5 +1,12 @@
 //global variable
 //var level = 0;
+/*
+* commonjs.js *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
 function countdownTimer(number) {
     if (number == 0) {
         timerAlert();

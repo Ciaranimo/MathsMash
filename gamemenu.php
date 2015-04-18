@@ -1,4 +1,11 @@
 <?php
+/*
+* gamemenu.php *
+* Rev 1 *
+* 18/04/2015 *
+*
+* @author Eoin Sutton, Conor Prunty, David Byrne, Ciaran Byrne, Kevin Clarke *
+*/ 
 
     // connect to DB
     require("common.php");
@@ -33,7 +40,7 @@
     <script src="jquery-2.1.1.min.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
-var myscore = 
+    var myscore = 
                         <?php echo $row["score"];?>;
     var levelNew = 
                         <?php echo $row["level"];?>;
