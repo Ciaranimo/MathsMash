@@ -21,17 +21,20 @@ function countdownTimer(number) {
 function timerAlert() {
     $('#firstnum').val("");
     $('#secondnum').val("");
-    $('#currentScore').val("");
     $('#totalPlays').val("");
     totalUpdatedScore = correct;
     updatedTotalScore();
     setLevel();
     ajaxSubmit();
-    correct = 0;
-    count = 0;
     hide();
     showBegin();
     stopTimer();
+}
+
+function scoreUpdate(){
+	$('#currentScore').val("");
+	correct = 0;
+    count = 0;
 }
 
 function ajaxSubmit() {

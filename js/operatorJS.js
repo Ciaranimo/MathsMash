@@ -12,6 +12,7 @@
           timer;
 
       function begin() {
+		  scoreUpdate();
           setNum();
           show();
           countdownTimer(10000);

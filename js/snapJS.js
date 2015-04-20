@@ -11,6 +11,7 @@
           myTime, timer;
 
       function begin() {
+		  scoreUpdate();
           generateNums();
           hideBegin();
           setNum();

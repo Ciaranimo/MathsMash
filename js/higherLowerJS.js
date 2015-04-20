@@ -11,6 +11,7 @@ var randomNum, randomNum2, count = 0,
     timer, totalUpdatedScore = 0;
 
 function begin() {
+	scoreUpdate();
     setNum();
     show();
     countdownTimer(5000);

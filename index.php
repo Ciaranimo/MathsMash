@@ -121,13 +121,13 @@
                 <h4>Login</h4><input name="username" type="text" value=
                 "<?php echo $submitted_username; ?>">
 
-                <h4>Password</h4><input name="password" type="password">
+                <h4>Password</h4><input name="password" type="password"><br><br>
+				<a href="mailto:admin@mathsmash.com?Subject=Password%20Reset" target="_top">Reset Password</a>
 
                 <p><input class="button" id="mash" type="submit" value=
                 "Mash"></p><!--<p><a id="mash" href ="mainmenu.html"><button class="button" type="button">mash</button></a></p>-->
                 <!--<p id="remember"><input type="checkbox" name="remember" value="yes"  /> remember me?</p>-->
-                <br>
-                <a class="button" href="register.php">Register</a><br>
+                <a class="button" href="register.php">Register</a>
             </form>
         </div>
 

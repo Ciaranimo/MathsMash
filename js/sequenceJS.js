@@ -13,6 +13,7 @@ var ran1, ran2, addit, add2, subtr, sub2, multip, mul2, int2, int3, int4,
     timer;
 
 function begin() {
+	scoreUpdate();
     show();
     hideBegin();
     setNum();
