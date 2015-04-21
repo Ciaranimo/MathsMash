@@ -30,7 +30,9 @@
         // ensure valid email address 
         if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
         { 
-            die("Invalid E-Mail Address"); 
+            echo '<script language="javascript">';
+			echo 'alert("Invalid Email Address")';
+			echo '</script>'; 
         } 
          
         // check if email entered is not already in DB
@@ -142,7 +144,7 @@
         header("Location: mainmenu.php"); 
          
         // must call die
-        die("Redirecting to mainmenu.php"); 
+        // die("Redirecting to mainmenu.php"); 
     } 
      
 ?>
