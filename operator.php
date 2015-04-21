@@ -91,7 +91,7 @@ var myscore = <?php echo $row["score"];?>;
             <button id="butBegin" onclick="begin()">Begin</button>
 
             <div id="liveScoreUpdate" style="text-align: center">
-                <h2>Current Score:</h2><input id="currentScore" size="3" type=
+                <h2>Game Score:</h2><input id="currentScore" size="3" type=
                 "text" value=""><br>
                 <br>
             </div>

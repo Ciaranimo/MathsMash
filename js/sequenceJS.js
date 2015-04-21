@@ -17,7 +17,7 @@ function begin() {
     show();
     hideBegin();
     setNum();
-    countdownTimer(5000);
+    countdownTimer(15000);
 }
 
 function setNum() {
@@ -75,6 +75,7 @@ function one() {
         setNum();
     } else {
         count++;
+		correct = correct - 4;
         setNum();
     }
 }
@@ -86,6 +87,7 @@ function two() {
         setNum();
     } else {
         count++;
+		correct = correct - 4;
         setNum();
     }
 }
@@ -97,6 +99,7 @@ function three() {
         setNum();
     } else {
         count++;
+		correct = correct - 4;
         setNum();
     }
 }
@@ -108,6 +111,7 @@ function four() {
         setNum();
     } else {
         count++;
+		correct = correct - 4;
         setNum();
     }
 }

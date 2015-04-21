@@ -100,7 +100,7 @@ var myscore = <?php echo $row["score"];?>;
                 <div id="time"></div>
 
                 <div id="liveScoreUpdate">
-                    <h2>Current Score:</h2><input id="currentScore" size="3"
+                    <h2>Game Score:</h2><input id="currentScore" size="3"
                     type="text" value=""><br>
                     <br>
                     <br>

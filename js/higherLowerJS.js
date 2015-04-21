@@ -14,7 +14,7 @@ function begin() {
 	scoreUpdate();
     setNum();
     show();
-    countdownTimer(5000);
+    countdownTimer(15000);
     hideBegin();
 }
 
@@ -37,6 +37,7 @@ function higher() {
         setNum();
     } else {
         count++;
+		correct = correct - 2;
         setNum();
     }
 }
@@ -48,6 +49,7 @@ function lower() {
         setNum();
     } else {
         count++;
+		correct = correct - 2;
         setNum();
     }
 }

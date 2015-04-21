@@ -15,7 +15,7 @@
           generateNums();
           hideBegin();
           setNum();
-          countdownTimer(10000);
+          countdownTimer(15000);
           myTime = setInterval(setBackgroundTimer, 550);
       }
 
@@ -49,7 +49,6 @@
           } else {
               correct--;
               count++;
-              correct--;
           }
       }
 

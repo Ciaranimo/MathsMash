@@ -15,7 +15,7 @@
 		  scoreUpdate();
           setNum();
           show();
-          countdownTimer(10000);
+          countdownTimer(15000);
           hideBegin();
       }
 
@@ -52,6 +52,7 @@
               setNum();
           } else {
               count++;
+			  correct = correct - 3;
               setNum();
           }
       }
@@ -63,6 +64,7 @@
               setNum();
           } else {
               count++;
+			  correct = correct - 3;
               setNum();
           }
       }
@@ -74,6 +76,7 @@
               setNum();
           } else {
               count++;
+			  correct = correct - 3;
               setNum();
           }
       }
@@ -85,6 +88,7 @@
               setNum();
           } else {
               count++;
+			  correct = correct - 3;
               setNum();
           }
       }

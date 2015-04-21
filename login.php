@@ -85,7 +85,7 @@
         else 
         { 
             
-            print("Login Failed."); 
+            alert("Login Failed."); 
              
             // Show user their password again. The use of htmlentities prevents XSS attacks. 
             $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8'); 
