@@ -42,8 +42,6 @@ var myscore = <?php echo $row["score"];?>;
     </script>
     <script src=
     "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src=
-    "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="jquery-2.1.1.min.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="js/higherLowerJS.js" type="text/javascript"></script><!--<script> alert("username = " + actualUser);</script>-->
