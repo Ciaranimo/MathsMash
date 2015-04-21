@@ -16,17 +16,18 @@
 }
 
 p {
-    font-size:16px;
+    font-size:16px /*default text size*/
 }
 
+/*Header design*/
 header {
-    width:auto;
+    width:auto; 
     height:80px;
     border-bottom:solid purple 1px;
     background-color:#fff;
 }
 
-#lvlimg {
+#lvlimg  /* places user icon on the left*/{
     float:left;
     padding:5px;
 }
@@ -37,26 +38,33 @@ header {
     padding-left:5px;
 }
 
-a {
+a /*removes decoration from links as default*/{
     text-decoration:none;
-/* removes underlining from all links */
 }
 
+/*Overall page styling*/
 body {
-    background-image:url(bg.png);
+    background-image:url(bg.png); /*sets the background image on all pages*/
 	margin: 0;
+}
+
+#currentScore{
+	border:none;
+	font-size:40px;
+	text-align: center;
+	background-color:rgba(0, 0, 0, 0);
 }
 
 .page {
     text-align:center;
     color:purple;
-/*sets default text color everywhere to purple */
+	/*sets default text color everywhere to purple */
     font-family:'fonty';
-/* sets default font to our font*/
+	/* sets default font to our font*/
 }
 
 #logoimg {
-/*sets login page logo to set size*/
+	/*sets login page logo to set size*/
     max-height:150px;
     max-width:200px;
 }
@@ -91,7 +99,16 @@ body {
     padding:5px;
 }
 
-<!----FOOTER----->
+#topGames{
+	margin-top: 40px;
+}
+
+#bottomGames{
+	margin-bottom: 40px;
+}
+
+
+/*Footer styling*/
 .footer {
 /*puts home button centre*/
     margin-top:10px;
@@ -100,13 +117,7 @@ body {
     height:90px;
 }
 
-<!--main menu code-->
-.gameButton {
-/*used for mainmenu buttons*/
-    border:solid #a52a2a 2px;
-}
-
-<!---Snap ---->
+/*Snap game styling*/
 #leftBox {
     margin-left:auto;
     margin-right:auto;
@@ -144,7 +155,7 @@ body {
 	text-decoration:none;
 }
 
-<!--Sequence---->
+/*Sequence game styling*/
 .seqnums {
     display:inline-block;
     width:60px;
@@ -175,19 +186,8 @@ body {
 }
 
 .seqdisplay {
-    
     margin-bottom:4%;
     margin-top:10%;
-}
-
-<!--Operators-->
-.opdisplay {
-/*does nothing*/
-    width:auto;
-    
-    height: 100px;
-    background-color:blue;
-    margin-top:30px;
 }
 
 #firstnum {
@@ -231,6 +231,8 @@ body {
     font-size:30px;
     font-weight:700;
     background:none;
+	border: none;
+	font-family: 'fonty';
 }
 
 #guess {
@@ -281,7 +283,7 @@ body {
     margin-bottom:10px;
 }
 
-<!----Edit Account ---->
+/*Edit Account styling*/
 button {
 /*applies ripple on every button*/
     position:relative;
@@ -308,6 +310,7 @@ button#butBegin {
     margin-top:8%;
 }
 
+/*Leader board styling*/
 .ldrbrd {
     align:center;
     font-family:'fonty';
@@ -394,13 +397,6 @@ th {
     border-width:0 0 1px 1px;
 }
 
-#topGames{
-	margin-top: 40px;
-}
-
-#bottomGames{
-	margin-bottom: 40px;
-}
 
 .buttonkev {
 /*Basic Button ldrbrds*/
@@ -453,7 +449,7 @@ a.buttonkev {
     padding-top:5px;
 }
 
-<!----Home Button----->
+/*Home Button*/
 .round-button {
     width:10%;
     height:0;
