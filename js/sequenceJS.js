@@ -70,48 +70,48 @@ function setNum() {
 
 function one() {
     if (arr3[0] == int4) {
-        correct = correct + 4;
+        correct = correct + 3;
         count++;
         setNum();
     } else {
         count++;
-		correct = correct - 4;
+		correct = correct - 3;
         setNum();
     }
 }
 
 function two() {
     if (arr3[1] == int4) {
-        correct = correct + 4;
+        correct = correct + 3;
         count++;
         setNum();
     } else {
         count++;
-		correct = correct - 4;
+		correct = correct - 3;
         setNum();
     }
 }
 
 function three() {
     if (arr3[2] == int4) {
-        correct = correct + 4;
+        correct = correct + 3;
         count++;
         setNum();
     } else {
         count++;
-		correct = correct - 4;
+		correct = correct - 3;
         setNum();
     }
 }
 
 function four() {
     if (arr3[3] == int4) {
-        correct = correct + 4;
+        correct = correct + 3;
         count++;
         setNum();
     } else {
         count++;
-		correct = correct - 4;
+		correct = correct - 3;
         setNum();
     }
 }

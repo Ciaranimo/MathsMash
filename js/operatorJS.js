@@ -48,11 +48,11 @@
       function mul() {
           if (num1 * num2 == ans) {
               count++;
-              correct = correct + 3;
+              correct = correct + 1;
               setNum();
           } else {
               count++;
-			  correct = correct - 3;
+			  correct = correct - 1;
               setNum();
           }
       }
@@ -60,11 +60,11 @@
       function add() {
           if (num1 + num2 == ans) {
               count++;
-              correct = correct + 3;
+              correct = correct + 1;
               setNum();
           } else {
               count++;
-			  correct = correct - 3;
+			  correct = correct - 1;
               setNum();
           }
       }
@@ -72,11 +72,11 @@
       function sub() {
           if (num1 - num2 == ans) {
               count++;
-              correct = correct + 3;
+              correct = correct + 1;
               setNum();
           } else {
               count++;
-			  correct = correct - 3;
+			  correct = correct - 1;
               setNum();
           }
       }
@@ -84,11 +84,11 @@
       function div() {
           if (num1 / num2 == ans) {
               count++;
-              correct = correct + 3;
+              correct = correct + 1;
               setNum();
           } else {
               count++;
-			  correct = correct - 3;
+			  correct = correct - 1;
               setNum();
           }
       }

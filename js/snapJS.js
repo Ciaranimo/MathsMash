@@ -44,7 +44,7 @@
 
       function checkNums() {
           if (ran1 == ran2) {
-              correct++;
+              correct=correct+3;
               count++;
           } else {
               correct--;
