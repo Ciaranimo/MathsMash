@@ -124,7 +124,7 @@
                 "<?php echo $submitted_username; ?>">
 
                 <h4>Password</h4><input name="password" type="password"><br><br>
-				<a href="mailto:admin@mathsmash.com?Subject=Password%20Reset" target="_top">Reset Password</a>
+				<a href="mailto:admin@mathsmash.eu?Subject=Password%20Reset" target="_top">Forgot Password</a>
 
                 <p><input class="button" id="mash" type="submit" value=
                 "Mash"></p><!--<p><a id="mash" href ="mainmenu.html"><button class="button" type="button">mash</button></a></p>-->

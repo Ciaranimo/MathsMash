@@ -29,15 +29,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <script type="text/javascript">
-var myscore = <?php echo $row["score"];?>;
-    var levelNew = <?php echo $row["level"];?>;
+		var myscore = <?php echo $row["score"];?>;
+		var levelNew = <?php echo $row["level"];?>;
     </script>
     <script src="js/profile.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css">
 
-    <title></title>
+    <title>Main Menu</title>
 </head>
 
 <body onload="setIcon()">
