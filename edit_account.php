@@ -14,10 +14,14 @@
     if(empty($_SESSION['user'])) 
     { 
         // if not go to login
-        header("Location: login.php"); 
+        header("Location: index.php"); 
          
         // needed statement
-        die("Redirecting to login.php"); 
+        die("Redirecting to index.php"); 
+    } 
+	else
+    {
+        require("topMenu.php");
     } 
      
     // check if edit form submitted
@@ -148,8 +152,24 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href=
+    "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel=
+    "stylesheet">
+    <script type="text/javascript">
+var actualUser = <?php echo json_encode(htmlentities($_SESSION['user']['username'])); ?>;
+    </script>
+    <script type="text/javascript">
+var myscore = <?php echo $row["score"];?>;
+    var levelNew = <?php echo $row["level"];?>;
+    </script>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src=
+    "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="jquery-2.1.1.min.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css">
 	<script src="js/commonJS.js" type="text/javascript"></script>
+	<script src="js/profile.js" type="text/javascript"></script>
 
     <title>Edit Account</title>
 </head>
@@ -157,19 +177,21 @@
 <body onload="setIcon()">
     <div class="page">
         <header>
-            <div id="icon"></div><a href="logout.php" id="logout"><img src=
-            "images/logout_icon.png" style=
-            "width:50px;height:50px;border:0"></a>
-        </header>
+                <div id="icon"></div>
+
+                <p id="lvlnum">Level: <?php echo $row["level"];?></p><a href=
+                "logout.php" id="logout"><img src="images/logout_icon.png"
+                style="width:50px;height:50px;border:0"></a>
+            </header>
 
         <div class="content">
             <form action="edit_account.php" method="post">
                 <div id="profileName">
                     <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?>
                 </div>
-
-                <p>E-Mail Address:</p><input name="email" type="text" value=
-                " &lt;?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?&gt;">
+				
+				<p>E-Mail Address:</p><input name="email" type="text" value=
+                " <?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?> " <br>
 
                 <p>Password:</p><input name="password" type="password" value=
                 ""><br>

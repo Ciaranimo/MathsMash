@@ -91,7 +91,7 @@ var myscore = <?php echo $row["score"];?>;
                 "text" value=""><br>
                 <br>
                 <br>
-                <a href="gamemenu.php"><img src="images/home_button.png" style=
+                <a href="mainmenu.php"><img src="images/home_button.png" style=
                 "width:50px;height:50px;border:0"></a>
 				<img onclick="back()" src="images/backButton.png" style= 
 			"width:50px;height:50px;border:0"></img>

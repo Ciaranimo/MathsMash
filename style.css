@@ -131,7 +131,17 @@ body {
 }
 
 #snap {
-    margin-top:8%
+	background-color:#6a238e;
+	-moz-border-radius:21px;
+	-webkit-border-radius:21px;
+	border-radius:21px;
+	display:inline-block;
+	cursor:pointer;
+	color:#00ffff;
+	font-family:'fonty';
+	font-size:28px;
+	padding:12px 27px;
+	text-decoration:none;
 }
 
 <!--Sequence---->

@@ -52,31 +52,35 @@ var actualUser = <?php echo json_encode(htmlentities($_SESSION['user']['username
 </head>
 
 <body onload="setIcon()">
-    <header>
-        <div id="icon"></div><a href="logout.php" id="logout"><img src=
-        "images/logout_icon.png" style="width:50px;height:50px;border:0"></a>
-    </header>
+    <div class="page">
+		<header>
+					<div id="icon"></div>
+					<a href=
+					"logout.php" id="logout"><img src="images/logout_icon.png"
+					style="width:50px;height:50px;border:0"></a>
+				</header>
 
-    <div style="text-align: center">
-        <br>
-        <!--set name based on session-->
+		<div style="text-align: center">
+			<br>
+			<!--set name based on session-->
 
-        <div id="profileName">
-            <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?>
-        </div><!--set level based on database-->
+			<div id="profileName">
+				<?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?>
+			</div><!--set level based on database-->
 
-        <div id="profileLevel">
-            Level: <?php echo $row["level"];?><br>
-            Score: <?php echo $row["score"];?><br>
-            <a href="edit_account.php" id="eaccount">Edit Account</a>
-        </div>
-    </div>
+			<div id="profileLevel">
+				Level: <?php echo $row["level"];?><br>
+				Score: <?php echo $row["score"];?><br>
+				<a href="edit_account.php" id="eaccount">Edit Account</a>
+			</div>
+		</div>
 
-    <div style="text-align: center">
-        <a href="mainmenu.php"><img src="images/home_button.png" style=
-        "width:50px;height:50px;border:0"></a>
-		<img onclick="back()" src="images/backButton.png" style= 
-			"width:50px;height:50px;border:0"></img>
-    </div>
+		<div style="text-align: center">
+			<a href="mainmenu.php"><img src="images/home_button.png" style=
+			"width:50px;height:50px;border:0"></a>
+			<img onclick="back()" src="images/backButton.png" style= 
+				"width:50px;height:50px;border:0"></img>
+		</div>
+	</div>
 </body>
 </html>

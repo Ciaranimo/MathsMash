@@ -92,7 +92,9 @@
         else 
         { 
             
-            print("Login Failed."); 
+            echo '<script language="javascript">';
+			echo 'alert("Login Failed: Invalid Details")';
+			echo '</script>'; 
              
             // Show user their password again. The use of htmlentities prevents XSS attacks. 
             $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8'); 

@@ -93,18 +93,22 @@ var myscore = <?php echo $row["score"];?>;
             <div class="content">
                 <div id="leftBox"></div>
 
-                <div id="rightBox"></div><button id="butBegin" onclick=
-                "begin()">Begin</button> <button id="snap" onclick=
-                "snapFunction()">SNAP</button>
+                <div id="rightBox"></div>
+				
+				<button id="butBegin" onclick=
+                "begin()">Begin</button> 
 
                 <div id="time"></div>
+				
+				<button id="snap" onclick=
+                "snapFunction()">SNAP</button>
 
                 <div id="liveScoreUpdate">
                     <h2>Game Score:</h2><input id="currentScore" size="3"
                     type="text" value=""><br>
                     <br>
                     <br>
-                    <a href="gamemenu.php"><img src="images/home_button.png"
+                    <a href="mainmenu.php"><img src="images/home_button.png"
                     style="width:50px;height:50px;border:0"></a>
 					<img onclick="back()" src="images/backButton.png" style= 
 			"width:50px;height:50px;border:0"></img>
