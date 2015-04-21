@@ -74,21 +74,19 @@ var myscore = <?php echo $row["score"];?>;
         <h1 style="text-align: center">Higher or Lower</h1>
 
         <div id="1" style="text-align: center">
-            Is: <input id="firstnum" size="3" type="text" value=""> higher or
+            Is: <input id="firstnum" size="3" type="text" value="?"> higher or
             lower than: <input id="secondnum" size="3" type="text" value=
-            ""><br>
+            "?"><br>
             <br>
             <button id="but1" onclick="higher()">Higher</button> <button id=
-            "but2" onclick="lower()">Lower</button><br>
-            <br>
-
+            "but2" onclick="lower()">Lower</button>
+			
             <div id="time"></div><button id="butBegin" onclick=
             "begin()">Begin</button><br>
-            <br>
 
             <div id="liveScoreUpdate">
                 <h2>Game Score:</h2><input id="currentScore" size="3" type=
-                "text" value=""><br>
+                "text" value="">
                 <br>
                 <br>
                 <a href="mainmenu.php"><img src="images/home_button.png" style=
